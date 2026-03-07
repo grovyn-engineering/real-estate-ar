@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUpRight, ArrowDown, Search } from 'lucide-react';
+import { ArrowUpRight, ArrowDown, Search, Home, Building2, KeyRound } from 'lucide-react';
 import gsap from 'gsap';
 import './Hero.css';
 
@@ -9,18 +9,12 @@ const Hero = () => {
     const titleRef = useRef();
     const descRef = useRef();
     const btnsRef = useRef();
-    const statsRef = useRef();
     const scrollRef = useRef();
+    const float1Ref = useRef();
+    const float2Ref = useRef();
+    const float3Ref = useRef();
 
     useEffect(() => {
-        const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-
-        // tl.from(titleRef.current, { y: 60, opacity: 0, duration: 1.1 })
-        //     .from(descRef.current, { y: 30, opacity: 0, duration: 0.8 }, '-=0.7')
-        //     .from(btnsRef.current, { y: 25, opacity: 0, duration: 0.7 }, '-=0.6')
-        //     .from(statsRef.current, { y: 20, opacity: 0, duration: 0.7 }, '-=0.5')
-        //     .from(scrollRef.current, { opacity: 0, duration: 0.5 }, '-=0.3');
-
         const hero = heroRef.current;
         const handleMouseMove = (e) => {
             const { clientX, clientY, currentTarget } = e;
@@ -30,6 +24,23 @@ const Hero = () => {
             gsap.to('.hero-bg', { x, y, duration: 1.2, ease: 'power1.out' });
         };
         hero.addEventListener('mousemove', handleMouseMove);
+
+        if (titleRef.current) gsap.fromTo(titleRef.current, { x: -40, opacity: 0 }, { x: 0, opacity: 1, duration: 1, ease: 'power3.out', delay: 0.2 });
+        if (descRef.current) gsap.fromTo(descRef.current, { x: -30, opacity: 0 }, { x: 0, opacity: 1, duration: 0.8, ease: 'power3.out', delay: 0.5 });
+        if (btnsRef.current) gsap.fromTo(btnsRef.current, { x: -20, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, ease: 'power3.out', delay: 0.7 });
+
+        const floats = [float1Ref.current, float2Ref.current, float3Ref.current].filter(Boolean);
+        floats.forEach((el, i) => {
+            gsap.to(el, {
+                y: -15,
+                duration: 2.5 + i * 0.5,
+                repeat: -1,
+                yoyo: true,
+                ease: 'sine.inOut',
+                delay: i * 0.3,
+            });
+        });
+
         return () => hero.removeEventListener('mousemove', handleMouseMove);
     }, []);
 
@@ -42,7 +53,7 @@ const Hero = () => {
             <div className="hero-bg" />
             <div className="hero-overlay" />
 
-            <div className="hero-content container">
+            <div className="hero-content">
                 <div className="hero-main-text">
                     <span className="hero-label">Premium Real Estate</span>
 
@@ -66,6 +77,18 @@ const Hero = () => {
                             <span className="consult-icon"><Search size={16} /></span>
                             Free Consultation
                         </Link>
+                    </div>
+                </div>
+
+                <div className="hero-animation-area">
+                    <div className="hero-float hero-float-1" ref={float1Ref}>
+                        <Home size={48} strokeWidth={1.5} />
+                    </div>
+                    <div className="hero-float hero-float-2" ref={float2Ref}>
+                        <Building2 size={56} strokeWidth={1.5} />
+                    </div>
+                    <div className="hero-float hero-float-3" ref={float3Ref}>
+                        <KeyRound size={40} strokeWidth={1.5} />
                     </div>
                 </div>
 
