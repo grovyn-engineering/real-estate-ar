@@ -1,0 +1,309 @@
+/* Filters */
+.portfolio-filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.search-box {
+    flex: 1;
+    min-width: 220px;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: var(--bg-main);
+    padding: 0.7rem 1.2rem;
+    border-radius: 50px;
+    border: 1.5px solid var(--border-color);
+    transition: border-color 0.2s;
+}
+
+.search-box:focus-within {
+    border-color: var(--accent-gold);
+}
+
+.search-icon {
+    color: var(--text-dim);
+    flex-shrink: 0;
+}
+
+.search-box input {
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--text-main);
+    width: 100%;
+    font-size: 0.9rem;
+    font-family: inherit;
+}
+
+.search-box input::placeholder { color: var(--text-muted); }
+
+.clear-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    font-size: 0.85rem;
+    padding: 0 0.2rem;
+    transition: color 0.2s;
+    flex-shrink: 0;
+}
+
+.clear-btn:hover { color: var(--text-main); }
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.filter-pill {
+    background: var(--bg-main);
+    border: 1.5px solid var(--border-color);
+    color: var(--text-muted);
+    padding: 0.55rem 1.3rem;
+    border-radius: 50px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.filter-pill:hover {
+    border-color: #1a1a1a;
+    color: var(--text-main);
+}
+
+.filter-pill.active {
+    background: #1a1a1a;
+    color: #fff;
+    border-color: #1a1a1a;
+}
+
+.filter-btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--bg-main);
+    border: 1.5px solid var(--border-color);
+    border-radius: 50%;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.filter-btn-icon:hover {
+    border-color: var(--accent-gold);
+    color: var(--accent-gold);
+}
+
+/* Results meta */
+.results-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+}
+
+.clear-filters-btn {
+    background: none;
+    border: none;
+    color: var(--accent-gold);
+    cursor: pointer;
+    font-size: 0.88rem;
+    font-weight: 600;
+    font-family: inherit;
+    text-decoration: underline;
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 6rem;
+}
+
+.portfolio-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.portfolio-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent-gold);
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-card-img {
+    position: relative;
+    height: 260px;
+    overflow: hidden;
+}
+
+.portfolio-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.portfolio-card:hover .portfolio-card-img img {
+    transform: scale(1.07);
+}
+
+.portfolio-badge {
+    position: absolute;
+    top: 1.2rem;
+    left: 1.2rem;
+    background: rgba(26, 26, 26, 0.75);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    padding: 0.35rem 0.9rem;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.portfolio-price-badge {
+    position: absolute;
+    bottom: 1.2rem;
+    right: 1.2rem;
+    background: rgba(184, 144, 42, 0.92);
+    backdrop-filter: blur(6px);
+    color: #fff;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.88rem;
+    font-weight: 700;
+}
+
+.portfolio-card-content {
+    padding: 2rem;
+}
+
+.portfolio-card-meta {
+    margin-bottom: 0.8rem;
+}
+
+.portfolio-location {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.78rem;
+    color: var(--accent-gold);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.portfolio-card-content h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 0.8rem;
+    letter-spacing: -0.01em;
+    text-transform: none;
+}
+
+.portfolio-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.portfolio-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.view-details {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+    transition: gap 0.2s;
+}
+
+.property-features-count {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+}
+
+/* No results */
+.no-results {
+    text-align: center;
+    padding: 5rem 2rem;
+    margin-bottom: 4rem;
+}
+
+.no-results h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+    text-transform: none;
+}
+
+.no-results p {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+/* CTA Block */
+.portfolio-cta-block {
+    margin-bottom: 6rem;
+}
+
+.cta-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-main);
+    text-transform: none;
+}
+
+.cta-text p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px) {
+    .portfolio-filters { flex-direction: column; align-items: stretch; }
+    .filter-group { justify-content: flex-start; }
+}
+
+@media (max-width: 600px) {
+    .portfolio-grid { grid-template-columns: 1fr; }
+    .flex-between { flex-direction: column; text-align: center; }
+}

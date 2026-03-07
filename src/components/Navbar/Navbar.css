@@ -1,0 +1,229 @@
+.navbar-premium {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 1.5rem 0;
+    transition: all 0.4s ease;
+}
+
+/* ── Unscrolled state (sits over dark hero) ── */
+.navbar-premium:not(.scrolled) .brand-name {
+    color: #ffffff !important;
+}
+
+.navbar-premium:not(.scrolled) .nav-links-pill {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.18);
+}
+
+.navbar-premium:not(.scrolled) .nav-links-pill a {
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.navbar-premium:not(.scrolled) .nav-links-pill a:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.navbar-premium:not(.scrolled) .nav-links-pill a.active {
+    background: rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+    box-shadow: none;
+}
+
+.navbar-premium:not(.scrolled) .nav-phone-pill {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.18);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.navbar-premium:not(.scrolled) .nav-phone-pill:hover {
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.navbar-premium:not(.scrolled) .mobile-toggle {
+    color: #ffffff;
+}
+
+.navbar-premium.scrolled {
+    padding: 1rem 0;
+    background: rgba(248, 247, 244, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo .brand-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #1a1a1a;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+}
+
+/* Nav Pill */
+.nav-links-pill {
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.04);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 0.4rem;
+    border-radius: 50px;
+    gap: 0.5rem;
+}
+
+.nav-links-pill a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.6rem 1.4rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.nav-links-pill a:hover {
+    color: var(--text-main);
+    background: rgba(0, 0, 0, 0.04);
+}
+
+.nav-links-pill a.active {
+    background: #ffffff;
+    color: #1a1a1a;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Actions */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-phone-pill {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: rgba(0, 0, 0, 0.04);
+    padding: 0.4rem 1rem 0.4rem 0.4rem;
+    border-radius: 50px;
+    text-decoration: none;
+    color: var(--text-main);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    transition: all 0.3s;
+}
+
+.nav-phone-pill:hover {
+    background: rgba(0, 0, 0, 0.08);
+}
+
+.phone-icon-circle {
+    width: 28px;
+    height: 28px;
+    background: #1a1a1a;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.phone-number {
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Mobile Toggle */
+.mobile-toggle {
+    display: none;
+    color: #1a1a1a;
+    z-index: 1100;
+}
+
+/* Mobile Menu */
+.mobile-menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--bg-main);
+    z-index: 1050;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    transform: translateY(-20px);
+}
+
+.mobile-menu-overlay.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.mobile-menu-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.mobile-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.mobile-links a {
+    font-family: var(--font-montserrat);
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.mobile-links a:hover,
+.mobile-links a.active {
+    color: var(--accent-gold);
+}
+
+.mobile-cta {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.mobile-phone {
+    color: var(--text-main);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-toggle {
+        display: block;
+    }
+}

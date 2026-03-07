@@ -1,0 +1,42 @@
+.property-grid-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 4rem;
+}
+
+.header-text-wrap {
+    max-width: 600px;
+}
+
+.sub-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.header-accent {
+    width: 60px;
+    height: 60px;
+}
+
+.header-description {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+.property-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 2rem;
+}
+
+@media (max-width: 900px) {
+    .property-grid-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+}

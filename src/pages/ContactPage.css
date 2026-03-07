@@ -1,0 +1,209 @@
+.contact-refined-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: flex-start;
+    margin-bottom: 8rem;
+}
+
+.trust-badge-row {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-dim);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.gold-text {
+    color: var(--accent-gold);
+}
+
+.contact-text-content h2 {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    letter-spacing: -0.02em;
+}
+
+.contact-lead {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 4rem;
+}
+
+.contact-features-mini {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+    margin-bottom: 4rem;
+}
+
+.mini-feat {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.feat-number {
+    font-family: var(--font-montserrat);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+}
+
+.feat-text strong {
+    display: block;
+    font-size: 1rem;
+    color: var(--text-main);
+    margin-bottom: 0.4rem;
+}
+
+.feat-text p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.contact-info-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.info-pill {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    color: var(--text-main);
+}
+
+/* Form Styling */
+.contact-form-container {
+    padding: 4rem !important;
+}
+
+.form-header {
+    margin-bottom: 2.5rem;
+}
+
+.form-header h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-header p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.refined-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.input-group label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-dim);
+    text-transform: uppercase;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    background: var(--bg-main);
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    border-radius: 8px;
+    color: var(--text-main);
+    font-size: 0.95rem;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    border-color: var(--accent-gold);
+}
+
+.form-disclaimer {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Success State */
+.form-success-state {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.success-icon-box {
+    width: 80px;
+    height: 80px;
+    background: var(--accent-gold-soft);
+    color: var(--accent-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 2rem;
+}
+
+.form-success-state h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.form-success-state p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .contact-refined-split {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .input-row {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form-container {
+        padding: 2.5rem !important;
+    }
+
+    .contact-text-content h2 {
+        font-size: 2.2rem;
+    }
+}

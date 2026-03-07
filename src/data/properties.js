@@ -1,0 +1,97 @@
+export const PROPERTIES = [
+    {
+        id: 1,
+        title: "Celestial Heights Penthouse",
+        price: "$2,450,000",
+        numericPrice: 2450000,
+        location: "Downtown Metropolis",
+        type: "Penthouse",
+        image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=800",
+        gallery: [
+            "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1200",
+            "https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&q=80&w=1200",
+            "https://images.unsplash.com/photo-1560185007-cde436f6a4d0?auto=format&fit=crop&q=80&w=1200",
+            "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=1200",
+            "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&q=80&w=1200",
+        ],
+        description: "Experience the pinnacle of luxury living with panoramic views of the city skyline.",
+        features: ["3 Bedrooms", "4 Bathrooms", "Private Elevator", "Terrace Pool"],
+        coordinates: [40.7128, -74.0060]
+    },
+    {
+        id: 2,
+        title: "Azure Bay Villa",
+        price: "$4,100,000",
+        numericPrice: 4100000,
+        location: "Malibu Coast",
+        type: "Villa",
+        image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&q=80&w=800",
+        gallery: [
+            "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&q=80&w=1200",
+            "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&q=80&w=1200",
+            "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&q=80&w=1200",
+            "https://images.unsplash.com/photo-1554995207-c18c203602cb?auto=format&fit=crop&q=80&w=1200",
+            "https://images.unsplash.com/photo-1571055107559-3e67626fa8be?auto=format&fit=crop&q=80&w=1200",
+        ],
+        description: "A stunning architectural masterpiece perched on the cliffs overlooking the Pacific Ocean.",
+        features: ["5 Bedrooms", "6 Bathrooms", "Cinema Room", "Wine Cellar"],
+        coordinates: [34.0259, -118.7798]
+    },
+    {
+        id: 3,
+        title: "Emerald Meadows Estate",
+        price: "$1,200,000",
+        numericPrice: 1200000,
+        location: "Aspen Valley",
+        type: "Land/Estate",
+        image: "https://images.unsplash.com/photo-1500382017468-9049fee74a62?auto=format&fit=crop&q=80&w=800",
+        gallery: [
+            "https://images.unsplash.com/photo-1500382017468-9049fee74a62?auto=format&fit=crop&q=80&w=1200",
+            "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=1200",
+            "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&q=80&w=1200",
+            "https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&q=80&w=1200",
+            "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&q=80&w=1200",
+        ],
+        description: "Vast expanses of lush greenery perfect for your custom-built dream home.",
+        features: ["10 Acres", "Private Lake", "Mountain Views", "Permitted Build Site"],
+        coordinates: [39.1911, -106.8175]
+    },
+    {
+        id: 4,
+        title: "Urban Loft Residency",
+        price: "$850,000",
+        numericPrice: 850000,
+        location: "Brooklyn Heights",
+        type: "Flat",
+        image: "https://images.unsplash.com/photo-1600607687940-47a000df3bd9?auto=format&fit=crop&q=80&w=800",
+        gallery: [
+            "https://images.unsplash.com/photo-1600607687940-47a000df3bd9?auto=format&fit=crop&q=80&w=1200",
+            "https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&q=80&w=1200",
+            "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&q=80&w=1200",
+            "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&q=80&w=1200",
+            "https://images.unsplash.com/photo-1486304873000-235643847519?auto=format&fit=crop&q=80&w=1200",
+        ],
+        description: "Sleek industrial design meets modern comfort in this spacious urban sanctuary.",
+        features: ["2 Bedrooms", "2 Bathrooms", "High Ceilings", "Rooftop Access"],
+        coordinates: [40.6925, -73.9910]
+    },
+    {
+        id: 5,
+        title: "Golden Sands Retreat",
+        price: "$3,200,000",
+        numericPrice: 3200000,
+        location: "Miami Beach",
+        type: "Villa",
+        image: "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&q=80&w=800",
+        gallery: [
+            "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&q=80&w=1200",
+            "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&q=80&w=1200",
+            "https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&q=80&w=1200",
+            "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&q=80&w=1200",
+            "https://images.unsplash.com/photo-1458013925384-4d4df706f1de?auto=format&fit=crop&q=80&w=1200",
+        ],
+        description: "A tropical oasis with direct beach access and infinity pool.",
+        features: ["4 Bedrooms", "5 Bathrooms", "Private Dock", "Smart Home Tech"],
+        coordinates: [25.7907, -80.1300]
+    }
+];

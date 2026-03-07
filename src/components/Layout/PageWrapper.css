@@ -1,0 +1,8 @@
+.page-wrapper {
+    min-height: 100vh;
+    background-color: var(--bg-main);
+}
+
+.page-content {
+    padding: 6rem 0 10rem;
+}
