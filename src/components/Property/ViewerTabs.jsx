@@ -42,7 +42,7 @@ const ViewerTabs = ({ property }) => {
                     <GalleryView images={images} title={property.title} />
                 )}
                 {activeTab === '3d' && (
-                    <ThreeDView propertyType={property.type} />
+                    <ThreeDView />
                 )}
                 {activeTab === 'map' && (
                     <MapView
