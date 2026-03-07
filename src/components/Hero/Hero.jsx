@@ -29,19 +29,39 @@ const Hero = () => {
         if (descRef.current) gsap.fromTo(descRef.current, { x: -30, opacity: 0 }, { x: 0, opacity: 1, duration: 0.8, ease: 'power3.out', delay: 0.5 });
         if (btnsRef.current) gsap.fromTo(btnsRef.current, { x: -20, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, ease: 'power3.out', delay: 0.7 });
 
-        const floats = [float1Ref.current, float2Ref.current, float3Ref.current].filter(Boolean);
-        floats.forEach((el, i) => {
-            gsap.to(el, {
-                y: -15,
-                duration: 2.5 + i * 0.5,
-                repeat: -1,
-                yoyo: true,
-                ease: 'sine.inOut',
-                delay: i * 0.3,
+        const floatTweens = [];
+        const startFloatAnimations = () => {
+            const floats = [float1Ref.current, float2Ref.current, float3Ref.current].filter(Boolean);
+            floats.forEach((el, i) => {
+                const tween = gsap.to(el, {
+                    y: -15,
+                    duration: 2.5 + i * 0.5,
+                    repeat: -1,
+                    yoyo: true,
+                    ease: 'sine.inOut',
+                    delay: i * 0.3,
+                });
+                floatTweens.push(tween);
             });
-        });
+        };
 
-        return () => hero.removeEventListener('mousemove', handleMouseMove);
+        const mq = window.matchMedia('(max-width: 768px)');
+        const handleChange = (e) => {
+            if (e.matches) {
+                floatTweens.forEach((t) => t.kill());
+                floatTweens.length = 0;
+            } else {
+                startFloatAnimations();
+            }
+        };
+        if (!mq.matches) startFloatAnimations();
+        mq.addEventListener('change', handleChange);
+
+        return () => {
+            hero.removeEventListener('mousemove', handleMouseMove);
+            floatTweens.forEach((t) => t.kill());
+            mq.removeEventListener('change', handleChange);
+        };
     }, []);
 
     const scrollToContent = () => {
