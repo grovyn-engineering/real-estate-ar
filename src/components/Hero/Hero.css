@@ -46,15 +46,12 @@
 
 .hero-main-text {
     flex: 0 0 auto;
-    max-width: 520px;
     min-width: 320px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     position: relative;
     z-index: 15;
-    margin-right: 2rem;
-    padding-right: 3rem;
+    padding-left: 12rem;
 }
 
 .hero-animation-area {

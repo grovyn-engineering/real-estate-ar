@@ -67,11 +67,11 @@ const Hero = () => {
                     </div>
                 </div>
 
-                <div className="hero-animation-area">
+                {/* <div className="hero-animation-area">
                     <Suspense fallback={<div className="hero-3d-fallback" />}>
                         <Hero3DScene />
                     </Suspense>
-                </div>
+                </div> */}
             </div>
 
             <button className="hero-scroll-btn" onClick={scrollToContent} aria-label="Scroll down">
