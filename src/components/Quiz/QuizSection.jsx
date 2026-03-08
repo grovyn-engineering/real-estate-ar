@@ -13,8 +13,8 @@ const PROPERTY_TYPES = [
 const BUDGETS = [
     { id: 'under1cr', label: 'Under ₹1 Cr' },
     { id: '1cr-3cr', label: '₹1 Cr – ₹3 Cr' },
-    { id: '2cr-5cr', label: '₹2 Cr – ₹5 Cr' },
-    { id: 'above5cr', label: '₹5 Cr+' },
+    { id: '3cr-5cr', label: '₹3 Cr – ₹5 Cr' },
+    { id: '5cr+', label: '₹5 Cr+' },
 ];
 
 const QuizSection = () => {
