@@ -6,53 +6,58 @@ import './ProjectsCarousel.css';
 export const PROJECTS_DATA = [
     {
         id: 1,
-        location: 'Beverly Hills, California',
+        title: 'Lavasa Villa',
+        location: 'Lavasa, Pune',
         type: 'Villa',
-        review: 'Premium Estates found us an extraordinary home with a panoramic canyon view. The process was smooth, professional and utterly stress-free.',
+        review: 'Grovyn Properties found us an extraordinary home with panoramic valley views. The process was smooth, professional and utterly stress-free.',
         img: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600&q=80',
         image: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600&q=80',
-        client: 'Thompson Family',
-        price: '$3.8M'
+        client: 'Sharma Family',
+        price: '₹3.8 Cr'
     },
     {
         id: 2,
-        location: 'Manhattan, New York',
+        title: 'BKC Penthouse',
+        location: 'Bandra Kurla Complex, Mumbai',
         type: 'Penthouse',
-        review: 'We sold our penthouse 22% above the asking price. Their marketing strategy and global buyer network is second to none.',
+        review: 'We sold our penthouse 22% above the asking price. Their marketing strategy and buyer network is second to none.',
         img: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80',
         image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80',
-        client: 'Chen & Associates',
-        price: '$5.1M'
+        client: 'Mehta & Associates',
+        price: '₹5.1 Cr'
     },
     {
         id: 3,
-        location: 'Miami Beach, Florida',
+        title: 'Goa Beach Villa',
+        location: 'Baga, Goa',
         type: 'Waterfront Villa',
         review: 'From the first search to getting the keys, everything was handled with the highest level of professionalism. Our new home is beyond what we imagined.',
         img: 'https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=600&q=80',
         image: 'https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=600&q=80',
-        client: 'The Rodriguez Family',
-        price: '$4.4M'
+        client: 'The Kapoor Family',
+        price: '₹4.4 Cr'
     },
     {
         id: 4,
-        location: 'Aspen, Colorado',
+        title: 'Lonavala Estate',
+        location: 'Lonavala, Maharashtra',
         type: 'Mountain Estate',
         review: 'We acquired this remarkable estate through their off-market network. A genuinely exclusive opportunity we would never have found on our own.',
         img: 'https://images.unsplash.com/photo-1500382017468-9049fee74a62?w=600&q=80',
         image: 'https://images.unsplash.com/photo-1500382017468-9049fee74a62?w=600&q=80',
-        client: 'Morrison Capital',
-        price: '$6.2M'
+        client: 'Singh Capital',
+        price: '₹6.2 Cr'
     },
     {
         id: 5,
-        location: 'Brooklyn Heights, New York',
-        type: 'Urban Loft',
+        title: 'Indiranagar Residency',
+        location: 'Indiranagar, Bangalore',
+        type: 'Apartment',
         review: 'The best real estate experience I have had in 20 years of property investment. Knowledgeable, responsive and delivered exactly what was promised.',
         img: 'https://images.unsplash.com/photo-1600607687940-47a000df3bd9?w=600&q=80',
         image: 'https://images.unsplash.com/photo-1600607687940-47a000df3bd9?w=600&q=80',
-        client: 'Marcus Webb',
-        price: '$1.2M'
+        client: 'Rajesh Kumar',
+        price: '₹1.2 Cr'
     }
 ];
 

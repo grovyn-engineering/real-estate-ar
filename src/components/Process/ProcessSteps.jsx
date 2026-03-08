@@ -7,7 +7,7 @@ const STEPS = [
         num: '01',
         icon: <Search size={24} />,
         title: 'Search & Discover',
-        desc: 'Browse our curated portfolio or share your requirements with an advisor. We source on-market and exclusive off-market listings tailored to you.',
+        desc: 'Browse our curated portfolio or share your requirements with an advisor. We source RERA-approved and exclusive listings across India\'s top cities.',
         img: 'https://images.unsplash.com/photo-1512428559087-560fa5ceab42?w=300&q=80',
         dark: true
     },
@@ -30,7 +30,7 @@ const STEPS = [
         title: 'Property Viewings',
         desc: 'Schedule private viewings at your convenience — in person or via immersive virtual tours. We\'ll arrange everything, including travel.',
         profile: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80',
-        profileName: 'James Wilson, Senior Advisor',
+        profileName: 'Rahul Mehta, Senior Advisor',
         dark: true
     },
     {
@@ -65,7 +65,6 @@ const ProcessSteps = () => {
                 </div>
 
                 <div className="process-grid">
-                    {/* Step 1 */}
                     <div className="process-card card-dark process-1">
                         <div className="step-badge">{STEPS[0].num}</div>
                         <div className="step-icon-box">{STEPS[0].icon}</div>
@@ -76,7 +75,6 @@ const ProcessSteps = () => {
                         </div>
                     </div>
 
-                    {/* Step 2 */}
                     <div className="process-card card-light process-2">
                         <div className="step-badge dark">{STEPS[1].num}</div>
                         <div className="step-icon-box dark">{STEPS[1].icon}</div>
@@ -89,7 +87,6 @@ const ProcessSteps = () => {
                         </div>
                     </div>
 
-                    {/* Step 3 */}
                     <div className="process-card card-dark process-3">
                         <div className="step-badge">{STEPS[2].num}</div>
                         <div className="process-3-content">
@@ -105,7 +102,6 @@ const ProcessSteps = () => {
                         </div>
                     </div>
 
-                    {/* Step 4 */}
                     <div className="process-card process-4 bg-image">
                         <img src={STEPS[3].img} alt={STEPS[3].title} className="bg-img" />
                         <div className="step-badge">{STEPS[3].num}</div>
@@ -113,7 +109,6 @@ const ProcessSteps = () => {
                         <h3 className="process-card-title large">{STEPS[3].title}</h3>
                     </div>
 
-                    {/* Step 5 */}
                     <div className="process-card process-5 bg-image">
                         <img src={STEPS[4].img} alt={STEPS[4].title} className="bg-img" />
                         <div className="step-badge">{STEPS[4].num}</div>
@@ -122,7 +117,7 @@ const ProcessSteps = () => {
                             <h3 className="process-card-title large">{STEPS[4].title}</h3>
                             <p className="process-card-desc">{STEPS[4].desc}</p>
                             <div className="process-5-contact">
-                                <p>Available 7 days<br />a week — 9:00 to 21:00</p>
+                                <p>Available 7 days<br />a week — 10:00 to 20:00 IST</p>
                             </div>
                         </div>
                     </div>

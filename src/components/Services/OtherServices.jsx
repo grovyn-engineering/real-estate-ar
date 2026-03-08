@@ -5,14 +5,14 @@ import './OtherServices.css';
 
 const SERVICES = [
     {
-        title: 'Buy a Property',
-        desc: 'Access our curated portfolio of luxury homes with expert guidance at every step.',
+        title: 'Buy Property',
+        desc: 'Access our curated portfolio of premium homes across India with expert guidance at every step.',
         img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80',
         link: '/services'
     },
     {
-        title: 'Sell Your Home',
-        desc: 'Get the best market value with our proven premium marketing and negotiation strategy.',
+        title: 'Sell Property',
+        desc: 'Get the best market value with our proven marketing strategy and expert negotiation.',
         img: 'https://images.unsplash.com/photo-1558904541-efa843a96f09?w=600&q=80',
         link: '/services'
     },

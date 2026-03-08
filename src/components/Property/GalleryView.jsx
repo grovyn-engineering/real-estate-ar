@@ -24,7 +24,6 @@ const GalleryView = ({ images, title }) => {
     return (
         <>
             <div className="gallery-view" onKeyDown={handleKeyDown} tabIndex={-1}>
-                {/* Main Image */}
                 <div className="gallery-main">
                     <img
                         key={activeIndex}
@@ -33,7 +32,6 @@ const GalleryView = ({ images, title }) => {
                         className="gallery-main-image"
                     />
 
-                    {/* Prev / Next */}
                     <button className="gallery-nav-btn gallery-nav-prev" onClick={prev} aria-label="Previous">
                         <ChevronLeft size={20} />
                     </button>
@@ -41,7 +39,6 @@ const GalleryView = ({ images, title }) => {
                         <ChevronRight size={20} />
                     </button>
 
-                    {/* Expand */}
                     <button
                         className="gallery-expand-btn"
                         onClick={() => setLightboxOpen(true)}
@@ -50,12 +47,10 @@ const GalleryView = ({ images, title }) => {
                         <Expand size={16} />
                     </button>
 
-                    {/* Counter */}
                     <div className="gallery-counter">
                         {activeIndex + 1} <span>/</span> {images.length}
                     </div>
 
-                    {/* Dot indicators */}
                     <div className="gallery-dots">
                         {images.map((_, i) => (
                             <button
@@ -68,7 +63,6 @@ const GalleryView = ({ images, title }) => {
                     </div>
                 </div>
 
-                {/* Thumbnails */}
                 <div className="gallery-thumbnails">
                     {images.map((img, i) => (
                         <button
@@ -84,7 +78,6 @@ const GalleryView = ({ images, title }) => {
                 </div>
             </div>
 
-            {/* Lightbox */}
             {lightboxOpen && (
                 <div className="gallery-lightbox" onClick={() => setLightboxOpen(false)}>
                     <div className="lightbox-inner" onClick={e => e.stopPropagation()}>

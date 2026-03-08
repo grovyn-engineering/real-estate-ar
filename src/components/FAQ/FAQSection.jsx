@@ -4,7 +4,7 @@ import './FAQSection.css';
 
 const FAQS = [
     {
-        question: 'How do I start looking for a property with Premium Estates?',
+        question: 'How do I start looking for a property with Grovyn Properties?',
         answer: 'Simply contact us via phone, email, or our website form. One of our senior advisors will arrange a confidential consultation to understand your requirements, lifestyle and budget before curating a bespoke property shortlist.'
     },
     {
@@ -13,19 +13,19 @@ const FAQS = [
     },
     {
         question: 'What are your fees for buying and selling?',
-        answer: 'Our standard agency fee for sellers is competitive and transparent — we\'ll discuss this upfront during your free valuation. For buyers, our advisory service is complimentary for qualified clients.'
+        answer: 'Our standard brokerage fee for sellers is competitive and transparent — we\'ll discuss this upfront during your free valuation. For buyers, our advisory service is complimentary for qualified clients.'
     },
     {
-        question: 'Do you offer international property services?',
-        answer: 'Yes. We operate across 42 cities in 18 countries with dedicated local market experts and legal partnerships in each jurisdiction. We handle currency, tax, and cross-border compliance so you don\'t have to.'
+        question: 'Do you cover properties across India?',
+        answer: 'Yes. We operate across 25+ cities in India with dedicated local market experts. We cover Mumbai, Bangalore, Delhi NCR, Pune, Goa, Hyderabad and more — with RERA-compliant support in each market.'
     },
     {
         question: 'How long does the buying process typically take?',
-        answer: 'Timeline varies by location and property type. Domestic purchases typically complete in 6–10 weeks. International transactions may take 10–16 weeks. We provide a clear roadmap from offer to completion.'
+        answer: 'Timeline varies by location and property type. Ready-to-move properties typically complete in 4–8 weeks. Under-construction projects follow RERA milestones. We provide a clear roadmap from offer to registration.'
     },
     {
         question: 'Can you manage my investment property after purchase?',
-        answer: 'Absolutely. Our Rental Management division handles everything: tenant sourcing, vetting, rent collection, maintenance coordination and regular performance reporting — maximising your yield with zero hassle.'
+        answer: 'Absolutely. Our Rental Management division handles everything: tenant sourcing, verification, rent collection, maintenance coordination and regular performance reporting — maximising your yield with zero hassle.'
     }
 ];
 

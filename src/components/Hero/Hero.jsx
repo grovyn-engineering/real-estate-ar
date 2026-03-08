@@ -1,7 +1,8 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, Suspense } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUpRight, ArrowDown, Search, Home, Building2, KeyRound } from 'lucide-react';
+import { ArrowUpRight, ArrowDown, Search } from 'lucide-react';
 import gsap from 'gsap';
+import Hero3DScene from './Hero3DScene';
 import './Hero.css';
 
 const Hero = () => {
@@ -9,10 +10,6 @@ const Hero = () => {
     const titleRef = useRef();
     const descRef = useRef();
     const btnsRef = useRef();
-    const scrollRef = useRef();
-    const float1Ref = useRef();
-    const float2Ref = useRef();
-    const float3Ref = useRef();
 
     useEffect(() => {
         const hero = heroRef.current;
@@ -29,38 +26,8 @@ const Hero = () => {
         if (descRef.current) gsap.fromTo(descRef.current, { x: -30, opacity: 0 }, { x: 0, opacity: 1, duration: 0.8, ease: 'power3.out', delay: 0.5 });
         if (btnsRef.current) gsap.fromTo(btnsRef.current, { x: -20, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, ease: 'power3.out', delay: 0.7 });
 
-        const floatTweens = [];
-        const startFloatAnimations = () => {
-            const floats = [float1Ref.current, float2Ref.current, float3Ref.current].filter(Boolean);
-            floats.forEach((el, i) => {
-                const tween = gsap.to(el, {
-                    y: -15,
-                    duration: 2.5 + i * 0.5,
-                    repeat: -1,
-                    yoyo: true,
-                    ease: 'sine.inOut',
-                    delay: i * 0.3,
-                });
-                floatTweens.push(tween);
-            });
-        };
-
-        const mq = window.matchMedia('(max-width: 768px)');
-        const handleChange = (e) => {
-            if (e.matches) {
-                floatTweens.forEach((t) => t.kill());
-                floatTweens.length = 0;
-            } else {
-                startFloatAnimations();
-            }
-        };
-        if (!mq.matches) startFloatAnimations();
-        mq.addEventListener('change', handleChange);
-
         return () => {
             hero.removeEventListener('mousemove', handleMouseMove);
-            floatTweens.forEach((t) => t.kill());
-            mq.removeEventListener('change', handleChange);
         };
     }, []);
 
@@ -75,17 +42,17 @@ const Hero = () => {
 
             <div className="hero-content">
                 <div className="hero-main-text">
-                    <span className="hero-label">Premium Real Estate</span>
+                    <span className="hero-label">Premium Indian Real Estate</span>
 
                     <h1 className="hero-title" ref={titleRef}>
                         Find Your<br />
                         <span className="title-accent">Dream</span><br />
-                        Property.
+                        Home in India.
                     </h1>
 
                     <p className="hero-subtitle" ref={descRef}>
-                        We curate the world's finest residential properties — from urban penthouses
-                        to coastal villas. Expert guidance, seamless experience, exceptional results.
+                        We curate India's finest residential properties — from metro apartments and villas
+                        to luxury farmhouses. Expert guidance, RERA compliance, and a seamless experience.
                     </p>
 
                     <div className="hero-cta-row" ref={btnsRef}>
@@ -101,52 +68,13 @@ const Hero = () => {
                 </div>
 
                 <div className="hero-animation-area">
-                    <div className="hero-float hero-float-1" ref={float1Ref}>
-                        <Home size={48} strokeWidth={1.5} />
-                    </div>
-                    <div className="hero-float hero-float-2" ref={float2Ref}>
-                        <Building2 size={56} strokeWidth={1.5} />
-                    </div>
-                    <div className="hero-float hero-float-3" ref={float3Ref}>
-                        <KeyRound size={40} strokeWidth={1.5} />
-                    </div>
+                    <Suspense fallback={<div className="hero-3d-fallback" />}>
+                        <Hero3DScene />
+                    </Suspense>
                 </div>
-
-                {/* <div className="hero-bottom-stats" ref={statsRef}>
-                    <div className="stat-group">
-                        <div className="stat-profile-imgs">
-                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&q=80" alt="Client" />
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&q=80" alt="Client" />
-                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&q=80" alt="Client" />
-                        </div>
-                        <p className="stat-text-small">
-                            Trusted by <strong>1,200+</strong> homeowners.<br />
-                            Expert advice. Every step.
-                        </p>
-                    </div>
-
-                    <div className="stat-metrics">
-                        <div className="metric-item">
-                            <h3>850<span className="metric-plus">+</span></h3>
-                            <p>Properties<br />sold</p>
-                        </div>
-                        <div className="metric-item">
-                            <h3>15<span className="metric-plus">yr</span></h3>
-                            <p>Industry<br />experience</p>
-                        </div>
-                        <div className="metric-item">
-                            <h3>42<span className="metric-plus"></span></h3>
-                            <p>Cities<br />covered</p>
-                        </div>
-                        <div className="metric-item">
-                            <h3>4.9<span className="metric-plus">★</span></h3>
-                            <p>Average client<br />rating</p>
-                        </div>
-                    </div>
-                </div> */}
             </div>
 
-            <button className="hero-scroll-btn" ref={scrollRef} onClick={scrollToContent} aria-label="Scroll down">
+            <button className="hero-scroll-btn" onClick={scrollToContent} aria-label="Scroll down">
                 <ArrowDown size={18} />
             </button>
         </section>

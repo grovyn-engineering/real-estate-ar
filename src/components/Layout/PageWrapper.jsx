@@ -8,7 +8,6 @@ const PageWrapper = ({ children, title, subtitle, bgImage }) => {
 
     return (
         <div className="page-wrapper">
-            {/* Standardized Page Hero */}
             <div className="page-hero">
                 {bgImage && (
                     <div
@@ -23,7 +22,6 @@ const PageWrapper = ({ children, title, subtitle, bgImage }) => {
                 </div>
             </div>
 
-            {/* Content Area */}
             <main className="page-content">
                 <div className="container">
                     {children}

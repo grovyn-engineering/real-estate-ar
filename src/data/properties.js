@@ -1,10 +1,10 @@
 export const PROPERTIES = [
     {
         id: 1,
-        title: "Celestial Heights Penthouse",
-        price: "$2,450,000",
-        numericPrice: 2450000,
-        location: "Downtown Metropolis",
+        title: "Bandra Skyline Penthouse",
+        price: "₹4.2 Cr",
+        numericPrice: 42000000,
+        location: "Bandra West, Mumbai",
         type: "Penthouse",
         image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=800",
         gallery: [
@@ -14,16 +14,16 @@ export const PROPERTIES = [
             "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=1200",
             "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&q=80&w=1200",
         ],
-        description: "Experience the pinnacle of luxury living with panoramic views of the city skyline.",
-        features: ["3 Bedrooms", "4 Bathrooms", "Private Elevator", "Terrace Pool"],
-        coordinates: [40.7128, -74.0060]
+        description: "Experience premium living with panoramic views of the Arabian Sea and Mumbai skyline.",
+        features: ["3 Bedrooms", "4 Bathrooms", "Private Elevator", "Terrace"],
+        coordinates: [19.0596, 72.8295]
     },
     {
         id: 2,
-        title: "Azure Bay Villa",
-        price: "$4,100,000",
-        numericPrice: 4100000,
-        location: "Malibu Coast",
+        title: "Alibaug Beach Villa",
+        price: "₹8.5 Cr",
+        numericPrice: 85000000,
+        location: "Alibaug, Maharashtra",
         type: "Villa",
         image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&q=80&w=800",
         gallery: [
@@ -33,16 +33,16 @@ export const PROPERTIES = [
             "https://images.unsplash.com/photo-1554995207-c18c203602cb?auto=format&fit=crop&q=80&w=1200",
             "https://images.unsplash.com/photo-1571055107559-3e67626fa8be?auto=format&fit=crop&q=80&w=1200",
         ],
-        description: "A stunning architectural masterpiece perched on the cliffs overlooking the Pacific Ocean.",
-        features: ["5 Bedrooms", "6 Bathrooms", "Cinema Room", "Wine Cellar"],
-        coordinates: [34.0259, -118.7798]
+        description: "A stunning beachfront villa with private access to pristine Konkan coast.",
+        features: ["5 Bedrooms", "6 Bathrooms", "Private Pool", "Garden"],
+        coordinates: [18.6482, 72.8728]
     },
     {
         id: 3,
-        title: "Emerald Meadows Estate",
-        price: "$1,200,000",
-        numericPrice: 1200000,
-        location: "Aspen Valley",
+        title: "Lavasa Valley Estate",
+        price: "₹2.1 Cr",
+        numericPrice: 21000000,
+        location: "Lavasa, Pune",
         type: "Land/Estate",
         image: "https://images.unsplash.com/photo-1500382017468-9049fee74a62?auto=format&fit=crop&q=80&w=800",
         gallery: [
@@ -52,16 +52,16 @@ export const PROPERTIES = [
             "https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&q=80&w=1200",
             "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&q=80&w=1200",
         ],
-        description: "Vast expanses of lush greenery perfect for your custom-built dream home.",
-        features: ["10 Acres", "Private Lake", "Mountain Views", "Permitted Build Site"],
-        coordinates: [39.1911, -106.8175]
+        description: "Vast land parcels with mountain views — ideal for your custom-built weekend retreat.",
+        features: ["5 Acres", "Hill Views", "Gated Community", "Build Permit Ready"],
+        coordinates: [18.4052, 73.5069]
     },
     {
         id: 4,
-        title: "Urban Loft Residency",
-        price: "$850,000",
-        numericPrice: 850000,
-        location: "Brooklyn Heights",
+        title: "Indiranagar Residency",
+        price: "₹1.8 Cr",
+        numericPrice: 18000000,
+        location: "Indiranagar, Bangalore",
         type: "Flat",
         image: "https://images.unsplash.com/photo-1600607687940-47a000df3bd9?auto=format&fit=crop&q=80&w=800",
         gallery: [
@@ -71,16 +71,16 @@ export const PROPERTIES = [
             "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&q=80&w=1200",
             "https://images.unsplash.com/photo-1486304873000-235643847519?auto=format&fit=crop&q=80&w=1200",
         ],
-        description: "Sleek industrial design meets modern comfort in this spacious urban sanctuary.",
-        features: ["2 Bedrooms", "2 Bathrooms", "High Ceilings", "Rooftop Access"],
-        coordinates: [40.6925, -73.9910]
+        description: "Modern apartment in Bangalore's most sought-after locality with excellent connectivity.",
+        features: ["2 Bedrooms", "2 Bathrooms", "Modular Kitchen", "Club House"],
+        coordinates: [12.9784, 77.6408]
     },
     {
         id: 5,
-        title: "Golden Sands Retreat",
-        price: "$3,200,000",
-        numericPrice: 3200000,
-        location: "Miami Beach",
+        title: "Goa Baga Beach Villa",
+        price: "₹6.8 Cr",
+        numericPrice: 68000000,
+        location: "Baga, Goa",
         type: "Villa",
         image: "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&q=80&w=800",
         gallery: [
@@ -90,8 +90,8 @@ export const PROPERTIES = [
             "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&q=80&w=1200",
             "https://images.unsplash.com/photo-1458013925384-4d4df706f1de?auto=format&fit=crop&q=80&w=1200",
         ],
-        description: "A tropical oasis with direct beach access and infinity pool.",
-        features: ["4 Bedrooms", "5 Bathrooms", "Private Dock", "Smart Home Tech"],
-        coordinates: [25.7907, -80.1300]
+        description: "Tropical villa with direct beach access, infinity pool and stunning sunset views.",
+        features: ["4 Bedrooms", "5 Bathrooms", "Beach Access", "Smart Home"],
+        coordinates: [15.5535, 73.7569]
     }
 ];

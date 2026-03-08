@@ -31,7 +31,7 @@ const PromoContact = () => {
                                 />
                                 <div className="promo-value-badge">
                                     <TrendingUp size={16} />
-                                    <span>+18% avg. growth</span>
+                                    <span>+12% avg. appreciation</span>
                                 </div>
                             </div>
                         </div>
@@ -55,7 +55,7 @@ const PromoContact = () => {
                             <form className="promo-form" onSubmit={handleSubmit}>
                                 <input
                                     type="tel"
-                                    placeholder="+1 (___) ___-__-__"
+                                    placeholder="+91 ___________"
                                     className="promo-input"
                                     value={phone}
                                     onChange={(e) => setPhone(e.target.value)}

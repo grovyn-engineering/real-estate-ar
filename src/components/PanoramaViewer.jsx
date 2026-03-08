@@ -6,12 +6,6 @@ import { MarkersPlugin } from '@photo-sphere-viewer/markers-plugin';
 import '@photo-sphere-viewer/core/index.css';
 import '@photo-sphere-viewer/markers-plugin/index.css';
 
-/**
- * PanoramaViewer - 360° panorama with navigation hotspots
- * Supports:
- * - Equirectangular: pass panorama as string URL (e.g. '/panorama/panorama.jpg')
- * - Cubemap: pass panorama as object { left, front, right, back, top, bottom } (URLs)
- */
 const isCubemap = (p) => p && typeof p === 'object' && ['left', 'front', 'right', 'back', 'top', 'bottom'].every((k) => k in p);
 
 const PanoramaViewer = ({ panorama, markers = [], onMarkerClick }) => {

@@ -6,15 +6,15 @@ import './QuizSection.css';
 const PROPERTY_TYPES = [
     { id: 'penthouse', title: 'Penthouse', icon: <Building2 size={28} />, img: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=300&q=80' },
     { id: 'villa', title: 'Villa', icon: <Home size={28} />, img: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=300&q=80' },
-    { id: 'estate', title: 'Estate', icon: <TreePine size={28} />, img: 'https://images.unsplash.com/photo-1500382017468-9049fee74a62?w=300&q=80' },
+    { id: 'estate', title: 'Plot/Land', icon: <TreePine size={28} />, img: 'https://images.unsplash.com/photo-1500382017468-9049fee74a62?w=300&q=80' },
     { id: 'commercial', title: 'Commercial', icon: <Briefcase size={28} />, img: null },
 ];
 
 const BUDGETS = [
-    { id: 'under1m', label: 'Under $1M' },
-    { id: '1m-2m', label: '$1M – $2M' },
-    { id: '2m-5m', label: '$2M – $5M' },
-    { id: 'above5m', label: '$5M+' },
+    { id: 'under1cr', label: 'Under ₹1 Cr' },
+    { id: '1cr-3cr', label: '₹1 Cr – ₹3 Cr' },
+    { id: '2cr-5cr', label: '₹2 Cr – ₹5 Cr' },
+    { id: 'above5cr', label: '₹5 Cr+' },
 ];
 
 const QuizSection = () => {

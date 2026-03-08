@@ -9,8 +9,8 @@ const PROPERTY_TYPES = [
         img: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80',
         bullets: [
             'Panoramic city & skyline views from private terraces',
-            'Exclusive top-floor living with bespoke finishes',
-            'Private elevator access and concierge services'
+            'Exclusive top-floor living with premium finishes',
+            'Private elevator access and 24/7 security'
         ],
         btnText: 'View Penthouses',
         link: '/catalog?type=Penthouse'
@@ -20,8 +20,8 @@ const PROPERTY_TYPES = [
         img: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600&q=80',
         bullets: [
             'Expansive grounds with pools, gardens & outdoor living',
-            'Architectural masterpieces in premium coastal locations',
-            'Smart home technology and premium security systems'
+            'Premium villas in Goa, Alibaug, Lonavala & hill stations',
+            'Modular kitchens and modern security systems'
         ],
         btnText: 'View Villas',
         link: '/catalog?type=Villa'
@@ -31,8 +31,8 @@ const PROPERTY_TYPES = [
         img: 'https://images.unsplash.com/photo-1500382017468-9049fee74a62?w=600&q=80',
         bullets: [
             'Vast land parcels with complete privacy and seclusion',
-            'Bespoke builds or ready-to-move trophy properties',
-            'Ideal for multigenerational families and collectors'
+            'Build your dream home or invest in plotted development',
+            'Ideal for multigenerational families and weekend retreats'
         ],
         btnText: 'View Estates',
         link: '/catalog?type=Land/Estate'

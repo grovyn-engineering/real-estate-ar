@@ -5,27 +5,27 @@ import './TeamSection.css';
 
 const TEAM = [
     {
-        name: 'James Wilson',
+        name: 'Rahul Mehta',
         role: 'Senior Property Advisor',
-        spec: 'Manhattan & Brooklyn',
+        spec: 'Mumbai & Thane',
         img: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80'
     },
     {
-        name: 'Elena Marchetti',
+        name: 'Priya Sharma',
         role: 'Luxury Sales Director',
-        spec: 'Beverly Hills & Malibu',
+        spec: 'Bangalore & Hyderabad',
         img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80'
     },
     {
-        name: 'David Chen',
+        name: 'Vikram Singh',
         role: 'Investment Specialist',
-        spec: 'Miami Beach & Coral Gables',
+        spec: 'Goa & Pune',
         img: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80'
     },
     {
-        name: 'Sarah Okafor',
+        name: 'Ananya Reddy',
         role: 'Head of Client Relations',
-        spec: 'International Markets',
+        spec: 'Pan-India Markets',
         img: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80'
     }
 ];

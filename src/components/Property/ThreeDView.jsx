@@ -4,10 +4,8 @@ import { Canvas } from '@react-three/fiber';
 import { useGLTF, Stage, OrbitControls } from '@react-three/drei';
 import './ThreeDView.css';
 
-// GLB from public/models/ - served at /models/Home.glb
 const modelUrl = '/models/Home.glb';
 
-// Color palette for untextured model parts (hex)
 const COLORS = {
     wall: 0xe8e4df,
     floor: 0xc4b8a8,

@@ -4,9 +4,9 @@ import { ArrowUpRight, Home, Users, MapPin, Award } from 'lucide-react';
 import './MapImpact.css';
 
 const STATS = [
-    { icon: <Home size={28} />, value: '850+', label: 'Properties Sold', desc: 'Across premium residential markets worldwide' },
+    { icon: <Home size={28} />, value: '850+', label: 'Properties Sold', desc: 'Across India\'s premium residential markets' },
     { icon: <Users size={28} />, value: '1,200+', label: 'Happy Families', desc: 'Who found their dream home through us' },
-    { icon: <MapPin size={28} />, value: '42', label: 'Cities Covered', desc: 'With dedicated local market experts' },
+    { icon: <MapPin size={28} />, value: '25+', label: 'Cities Covered', desc: 'With dedicated local market experts' },
     { icon: <Award size={28} />, value: '15yr', label: 'Industry Experience', desc: 'Of trusted real estate excellence' },
 ];
 
@@ -41,7 +41,7 @@ const MapImpact = () => {
                     <div className="impact-map-wrapper">
                         <img
                             src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=1200&q=80"
-                            alt="Our global presence"
+                            alt="Our pan-India presence"
                             className="impact-map-img"
                         />
                         <div className="impact-map-overlay">
@@ -52,8 +52,8 @@ const MapImpact = () => {
                             <div className="pin" style={{ top: '48%', left: '70%' }}></div>
                         </div>
                         <div className="map-caption glass-card">
-                            <strong>Global Coverage</strong>
-                            <p>Present across 42 cities in 18 countries</p>
+                            <strong>Pan-India Presence</strong>
+                            <p>Present across 25+ cities in India</p>
                         </div>
                     </div>
                 </div>

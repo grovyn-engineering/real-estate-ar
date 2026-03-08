@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  /* Colors — Light Mode */
   --bg-main: #f8f7f4;
   --bg-card: #ffffff;
   --bg-card-glass: rgba(255, 255, 255, 0.85);
@@ -19,11 +18,9 @@
   --border-color: rgba(0, 0, 0, 0.1);
   --border-glow: rgba(184, 144, 42, 0.35);
 
-  /* Typography */
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-montserrat: 'Montserrat', sans-serif;
 
-  /* Spacing & Sizing */
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-lg: 24px;
@@ -57,8 +54,6 @@ h3,
   letter-spacing: -0.02em;
 }
 
-/* Global Components & Utilities */
-
 .container {
   max-width: var(--container-max);
   margin: 0 auto;
@@ -71,7 +66,6 @@ h3,
   }
 }
 
-/* Section Header Typography */
 .section-header {
   margin-bottom: 4rem;
 }
@@ -102,7 +96,6 @@ h3,
   line-height: 1.6;
 }
 
-/* Standardized Buttons */
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -169,7 +162,6 @@ h3,
   transform: translateY(-2px);
 }
 
-/* Glass Card */
 .glass-card {
   background: var(--bg-card);
   backdrop-filter: blur(12px);
@@ -186,7 +178,6 @@ h3,
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
-/* Flex Utility */
 .flex-between {
   display: flex;
   justify-content: space-between;
@@ -195,7 +186,6 @@ h3,
   flex-wrap: wrap;
 }
 
-/* Page Hero Helper */
 .page-hero {
   position: relative;
   padding: 12rem 0 6rem;
@@ -232,18 +222,15 @@ h3,
   color: rgba(255, 255, 255, 0.75);
 }
 
-/* Gold accent text */
 .gold-text {
   color: var(--accent-gold);
 }
 
-/* Width utility */
 .w-full {
   width: 100%;
   justify-content: center;
 }
 
-/* Text center */
 .text-center {
   text-align: center;
 }
@@ -259,7 +246,6 @@ button {
   font-family: inherit;
 }
 
-/* Link utility */
 .link-with-icon {
   display: inline-flex;
   align-items: center;

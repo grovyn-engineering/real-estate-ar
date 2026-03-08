@@ -9,7 +9,7 @@ const SERVICES_DATA = [
         icon: <Home size={32} />,
         title: 'Property Acquisition',
         label: 'Buy & Invest',
-        desc: 'We guide you through every step of buying a home or investment property — from shortlisting and viewings to offer negotiation and legal completion. Our advisors have deep local market knowledge and exclusive off-market access.',
+        desc: 'We guide you through every step of buying a home or investment property — from shortlisting and site visits to offer negotiation and registration. Our advisors have deep local market knowledge across India and exclusive off-market access.',
         impact: 'Our buyers on average secure properties 8% below the initial asking price through our expert negotiation process.',
         features: ['Off-Market Listings', 'Expert Negotiation', 'Legal & Due Diligence Support']
     },
@@ -34,7 +34,7 @@ const SERVICES_DATA = [
         title: 'Investment Advisory',
         label: 'Grow & Diversify',
         desc: 'Strategic real estate investment guidance backed by granular market data and portfolio analysis. We identify high-yield opportunities across residential, commercial, and mixed-use asset classes.',
-        impact: 'Advisory clients have achieved an average annual property portfolio ROI of 14.2% over five years.',
+        impact: 'Advisory clients have achieved strong property portfolio appreciation across India\'s growth markets.',
         features: ['Market Analysis Reports', 'Portfolio Planning', 'ROI Forecasting']
     }
 ];
@@ -79,7 +79,6 @@ const ServicesPage = () => {
                 ))}
             </div>
 
-            {/* Bottom Strategic Section */}
             <div className="strategic-impact-block glass-card">
                 <div className="strategic-text">
                     <span className="section-label">Why Choose Us</span>

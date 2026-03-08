@@ -33,7 +33,7 @@ const SearchBar = () => {
                         <input
                             type="text"
                             name="location"
-                            placeholder="City, neighbourhood, ZIP..."
+                            placeholder="City, locality, or area..."
                             value={filters.location}
                             onChange={handleChange}
                             onKeyDown={handleKeyDown}
@@ -49,9 +49,10 @@ const SearchBar = () => {
                         <span className="field-label">Budget</span>
                         <select name="budget" value={filters.budget} onChange={handleChange}>
                             <option value="">Any Price</option>
-                            <option value="under1m">Under $1M</option>
-                            <option value="1m-3m">$1M – $3M</option>
-                            <option value="3m+">$3M+</option>
+                            <option value="under1cr">Under ₹1 Cr</option>
+                            <option value="1cr-3cr">₹1 Cr – ₹3 Cr</option>
+                            <option value="3cr-5cr">₹3 Cr – ₹5 Cr</option>
+                            <option value="5cr+">₹5 Cr+</option>
                         </select>
                     </div>
                 </div>
@@ -67,7 +68,7 @@ const SearchBar = () => {
                             <option value="Villa">Villa</option>
                             <option value="Penthouse">Penthouse</option>
                             <option value="Flat">Flat / Apartment</option>
-                            <option value="Land/Estate">Estate / Land</option>
+                            <option value="Land/Estate">Plot / Land</option>
                         </select>
                     </div>
                 </div>

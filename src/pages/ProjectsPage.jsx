@@ -62,7 +62,7 @@ const ProjectsPage = () => {
     return (
         <PageWrapper
             title="Case Studies"
-            subtitle="A selection of our most notable real estate transactions — from private sales to complex multi-property acquisitions."
+            subtitle="A selection of our most notable transactions across India — from private sales to multi-property acquisitions."
             bgImage="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80"
         >
             <div className="case-studies-list">
@@ -118,7 +118,6 @@ const ProjectsPage = () => {
                 })}
             </div>
 
-            {/* Bottom Methodology Section */}
             <div className="methodology-block glass-card">
                 <div className="section-header text-center">
                     <span className="section-label">Our Methodology</span>

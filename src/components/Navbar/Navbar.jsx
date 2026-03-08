@@ -27,11 +27,10 @@ const Navbar = () => {
             <div className="nav-container container">
                 <div className="nav-logo">
                     <Link to="/" className="brand-name serif">
-                        PREMIUM<br />ESTATES
+                        GROVYN<br />PROPERTIES
                     </Link>
                 </div>
 
-                {/* Desktop Links */}
                 <div className="nav-links-pill desktop-only">
                     <Link to="/" className={isActive('/') ? 'active' : ''}>Home</Link>
                     <Link to="/services" className={isActive('/services') ? 'active' : ''}>Services</Link>
@@ -44,13 +43,12 @@ const Navbar = () => {
                     <Link to="/contact" className="btn-primary-sm">
                         Request Viewing
                     </Link>
-                    <a href="tel:+1234567890" className="nav-phone-pill">
+                    <a href="tel:+919876543210" className="nav-phone-pill">
                         <span className="phone-icon-circle"><Phone size={14} /></span>
-                        <span className="phone-number">+1 (234) 567-89-00</span>
+                        <span className="phone-number">+91 98765 43210</span>
                     </a>
                 </div>
 
-                {/* Mobile Toggle */}
                 <button
                     className="mobile-toggle"
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -60,7 +58,6 @@ const Navbar = () => {
                 </button>
             </div>
 
-            {/* Mobile Menu Overlay */}
             <div className={`mobile-menu-overlay ${isMenuOpen ? 'open' : ''}`}>
                 <div className="mobile-menu-content">
                     <div className="mobile-links">
@@ -74,8 +71,8 @@ const Navbar = () => {
                         <Link to="/contact" className="btn-primary w-full">
                             Request a Viewing <ArrowUpRight size={18} />
                         </Link>
-                        <a href="tel:+1234567890" className="mobile-phone">
-                            <Phone size={20} /> +1 (234) 567-89-00
+                        <a href="tel:+919876543210" className="mobile-phone">
+                            <Phone size={20} /> +91 98765 43210
                         </a>
                     </div>
                 </div>

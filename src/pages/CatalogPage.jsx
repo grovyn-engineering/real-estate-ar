@@ -6,6 +6,7 @@ import { PROPERTIES } from '../data/properties';
 import './CatalogPage.css';
 
 const FILTER_TYPES = ['All Properties', 'Villa', 'Penthouse', 'Land/Estate', 'Flat'];
+const TYPE_MAP = { penthouse: 'Penthouse', villa: 'Villa', estate: 'Land/Estate' };
 
 const CatalogPage = () => {
     const [searchParams] = useSearchParams();
@@ -19,8 +20,9 @@ const CatalogPage = () => {
         if (typeVal) setActiveType(typeVal);
     }, [searchParams]);
 
+    const resolvedType = TYPE_MAP[activeType?.toLowerCase()] || activeType;
     const filtered = PROPERTIES.filter(p => {
-        const matchesType = activeType === 'All Properties' || p.type === activeType;
+        const matchesType = activeType === 'All Properties' || !activeType || p.type === resolvedType;
         const q = searchQuery.toLowerCase();
         const matchesQuery = !q || p.title.toLowerCase().includes(q) || p.location.toLowerCase().includes(q) || p.type.toLowerCase().includes(q);
         return matchesType && matchesQuery;
@@ -29,10 +31,9 @@ const CatalogPage = () => {
     return (
         <PageWrapper
             title="Property Portfolio"
-            subtitle="Explore our curated collection of luxury homes, villas, penthouses and private estates."
+            subtitle="Explore our curated collection of premium homes, villas, penthouses and plots across India."
             bgImage="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1600&q=80"
         >
-            {/* Filters */}
             <div className="portfolio-filters glass-card">
                 <div className="search-box">
                     <Search size={18} className="search-icon" />
@@ -51,7 +52,7 @@ const CatalogPage = () => {
                     {FILTER_TYPES.map(type => (
                         <button
                             key={type}
-                            className={`filter-pill ${activeType === type ? 'active' : ''}`}
+                            className={`filter-pill ${(activeType === type || resolvedType === type) ? 'active' : ''}`}
                             onClick={() => setActiveType(type)}
                         >
                             {type}
@@ -63,7 +64,6 @@ const CatalogPage = () => {
                 </div>
             </div>
 
-            {/* Results count */}
             <div className="results-meta">
                 <span>{filtered.length} {filtered.length === 1 ? 'property' : 'properties'} found</span>
                 {(searchQuery || activeType !== 'All Properties') && (
@@ -76,7 +76,6 @@ const CatalogPage = () => {
                 )}
             </div>
 
-            {/* Grid */}
             {filtered.length > 0 ? (
                 <div className="portfolio-grid">
                     {filtered.map(project => (
@@ -112,7 +111,6 @@ const CatalogPage = () => {
                 </div>
             )}
 
-            {/* CTA Block */}
             <div className="portfolio-cta-block">
                 <div className="glass-card flex-between">
                     <div className="cta-text">

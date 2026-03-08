@@ -4,7 +4,6 @@ import 'leaflet/dist/leaflet.css';
 import { Navigation, ExternalLink, MapPin, Play, Square } from 'lucide-react';
 import './MapView.css';
 
-// Gold SVG marker for the property
 const createGoldMarker = () => L.divIcon({
     html: `
         <div class="map-gold-pin">
@@ -17,7 +16,6 @@ const createGoldMarker = () => L.divIcon({
     className: '',
 });
 
-// Green start marker
 const createStartMarker = () => L.divIcon({
     html: `<div class="map-start-pin"></div>`,
     iconSize: [14, 14],
@@ -36,7 +34,6 @@ const MapView = ({ coordinates, title, location }) => {
 
         const [lat, lng] = coordinates;
 
-        // Build a simulated walking route near the property
         const routePoints = [
             [lat + 0.006, lng - 0.004],
             [lat + 0.004, lng - 0.002],
@@ -46,7 +43,6 @@ const MapView = ({ coordinates, title, location }) => {
             [lat, lng],
         ];
 
-        // Init map
         const map = L.map(mapRef.current, {
             zoomControl: false,
             attributionControl: false,
@@ -54,21 +50,17 @@ const MapView = ({ coordinates, title, location }) => {
 
         mapInstanceRef.current = map;
 
-        // Add zoom control to bottom-right
         L.control.zoom({ position: 'bottomright' }).addTo(map);
 
-        // Tile layer — CartoDB dark
         L.tileLayer(
             'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
             { subdomains: 'abcd', maxZoom: 19 }
         ).addTo(map);
 
-        // Attribution (small, bottom-left)
         L.control.attribution({ position: 'bottomleft', prefix: false })
             .addAttribution('© <a href="https://carto.com">CARTO</a> © <a href="https://openstreetmap.org">OSM</a>')
             .addTo(map);
 
-        // Walking route polyline
         L.polyline(routePoints, {
             color: '#b8902a',
             weight: 4,
@@ -77,7 +69,6 @@ const MapView = ({ coordinates, title, location }) => {
             lineJoin: 'round',
         }).addTo(map);
 
-        // Animated pulse circle under property marker
         L.circle(coordinates, {
             radius: 80,
             color: '#b8902a',
@@ -86,12 +77,10 @@ const MapView = ({ coordinates, title, location }) => {
             weight: 1,
         }).addTo(map);
 
-        // Start point marker
         L.marker(routePoints[0], { icon: createStartMarker() })
             .addTo(map)
             .bindPopup('<b>Starting Point</b><br/>Walking route begins here', { className: 'map-popup' });
 
-        // Property marker
         L.marker(coordinates, { icon: createGoldMarker() })
             .addTo(map)
             .bindPopup(
@@ -100,7 +89,6 @@ const MapView = ({ coordinates, title, location }) => {
             )
             .openPopup();
 
-        // Distance label on route mid-point
         const mid = routePoints[Math.floor(routePoints.length / 2)];
         L.marker(mid, {
             icon: L.divIcon({
@@ -111,7 +99,6 @@ const MapView = ({ coordinates, title, location }) => {
             }),
         }).addTo(map);
 
-        // Walkthrough: animate the map through route points
         const startWalkthrough = () => {
             setIsWalking(true);
             let step = 0;
@@ -139,7 +126,6 @@ const MapView = ({ coordinates, title, location }) => {
             map.flyTo([lat + 0.003, lng], 15, { duration: 1.0 });
         };
 
-        // Expose controls to buttons via DOM events
         mapRef.current._startWalkthrough = startWalkthrough;
         mapRef.current._stopWalkthrough = stopWalkthrough;
 
@@ -163,16 +149,13 @@ const MapView = ({ coordinates, title, location }) => {
 
     return (
         <div className="map-view-wrapper">
-            {/* Map */}
             <div ref={mapRef} className="map-container" />
 
-            {/* Top-left info badge */}
             <div className="map-location-badge">
                 <MapPin size={13} className="map-badge-icon" />
                 <span>{location}</span>
             </div>
 
-            {/* Controls footer */}
             <div className="map-footer">
                 <div className="map-legend">
                     <div className="legend-item">

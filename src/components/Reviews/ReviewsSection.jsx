@@ -6,21 +6,21 @@ import './ReviewsSection.css';
 const REVIEWS = [
     {
         initial: 'S',
-        name: 'Sarah & James Mitchell',
+        name: 'Sneha & Amit Patel',
         time: '2 weeks ago',
-        text: 'Found our dream penthouse in just 3 weeks. The team was incredibly attentive, understood our lifestyle perfectly and never wasted our time on unsuitable properties.'
+        text: 'Found our dream penthouse in Bandra in just 3 weeks. The team was incredibly attentive, understood our lifestyle perfectly and never wasted our time on unsuitable properties.'
     },
     {
         initial: 'R',
-        name: 'Robert Chen',
+        name: 'Ramesh Iyer',
         time: '1 month ago',
-        text: 'Sold my Malibu villa 18% above asking price. Their marketing strategy and global buyer network is unparalleled. I wouldn\'t trust anyone else with high-value real estate.'
+        text: 'Sold my Alibaug villa 18% above asking price. Their marketing strategy and buyer network is unparalleled. I wouldn\'t trust anyone else with high-value real estate.'
     },
     {
         initial: 'A',
-        name: 'Amelia Davidson',
+        name: 'Anita Desai',
         time: '2 months ago',
-        text: 'As a first-time luxury buyer, I was nervous. My advisor made the entire process seamless — from shortlisting to signing. Truly exceptional white-glove service.'
+        text: 'As a first-time luxury buyer, I was nervous. My advisor made the entire process seamless — from shortlisting to registration. Truly exceptional service.'
     }
 ];
 
@@ -32,7 +32,7 @@ const ReviewsSection = () => {
                     <div className="reviews-card text-card">
                         <div className="card-header">
                             <div>
-                                <h3 className="company-name">Premium Estates</h3>
+                                <h3 className="company-name">Grovyn Properties</h3>
                                 <div className="rating-info">
                                     <span className="rating-score">4.9</span>
                                     <div className="stars">
@@ -80,7 +80,7 @@ const ReviewsSection = () => {
                         />
                         <div className="reviews-cta-block glass-card">
                             <strong>Ready to write your own success story?</strong>
-                            <p>Join over 1,200 families who found their dream home through us.</p>
+                            <p>Join over 1,200 families across India who found their dream home through us.</p>
                             <Link to="/contact" className="btn-primary">
                                 Book Consultation <ArrowUpRight size={16} />
                             </Link>

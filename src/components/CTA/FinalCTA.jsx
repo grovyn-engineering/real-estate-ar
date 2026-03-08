@@ -13,7 +13,7 @@ const FinalCTA = () => {
                             <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1000&q=80" alt="Luxury property" />
                             <div className="cta-float-badge">
                                 <CheckCircle2 size={20} className="gold-text" />
-                                <span>Trusted by 1,200+ homeowners</span>
+                                <span>Trusted by 1,200+ homeowners across India</span>
                             </div>
                         </div>
                     </div>
@@ -61,7 +61,7 @@ const FinalCTA = () => {
                         <div className="milestones-row">
                             <div className="milestone-item">
                                 <strong>Est. 2009</strong>
-                                <p>15 years of real estate excellence.</p>
+                                <p>15 years of trusted real estate excellence in India.</p>
                             </div>
                             <div className="milestone-item">
                                 <Calendar size={18} className="gold-text" />

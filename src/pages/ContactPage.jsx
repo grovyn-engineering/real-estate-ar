@@ -21,16 +21,15 @@ const ContactPage = () => {
             bgImage="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80"
         >
             <div className="contact-refined-split">
-                {/* Left side — Trust & Info */}
                 <div className="contact-text-content">
                     <div className="trust-badge-row">
                         <ShieldCheck size={20} className="gold-text" />
-                        <span>Fixed Price & 7-Year Warranty Guarantee</span>
+                        <span>RERA-Compliant & Transparent Deals</span>
                     </div>
 
-                    <h2>Work with the region's top lighting architects</h2>
+                    <h2>Work with India's trusted real estate advisors</h2>
                     <p className="contact-lead">
-                        High-end lighting requires precision engineering and an artistic eye.
+                        Premium property requires expert guidance and market insight.
                         We respond to all inquiries within 24 business hours.
                     </p>
 
@@ -39,14 +38,14 @@ const ContactPage = () => {
                             <span className="feat-number">01</span>
                             <div className="feat-text">
                                 <strong>Direct Consultation</strong>
-                                <p>Speak directly with our senior designers, not a sales agent.</p>
+                                <p>Speak directly with our senior advisors, not a sales agent.</p>
                             </div>
                         </div>
                         <div className="mini-feat">
                             <span className="feat-number">02</span>
                             <div className="feat-text">
-                                <strong>On-Site Audit</strong>
-                                <p>We can visit your property for a detailed technical analysis.</p>
+                                <strong>Site Visit</strong>
+                                <p>We can arrange property visits and accompany you for viewings.</p>
                             </div>
                         </div>
                     </div>
@@ -54,20 +53,19 @@ const ContactPage = () => {
                     <div className="contact-info-pills">
                         <div className="info-pill">
                             <Phone size={18} />
-                            <span>+1 (234) 567-89-00</span>
+                            <span>+91 98765 43210</span>
                         </div>
                         <div className="info-pill">
                             <Mail size={18} />
-                            <span>hello@premiumlighting.com</span>
+                            <span>hello@grovynproperties.com</span>
                         </div>
                         <div className="info-pill">
                             <MapPin size={18} />
-                            <span>123 Lighting Ave, Moscow, RU</span>
+                            <span>Bandra Kurla Complex, Mumbai 400051</span>
                         </div>
                     </div>
                 </div>
 
-                {/* Right side — Form Container */}
                 <div className="contact-form-container glass-card">
                     {!submitted ? (
                         <>
@@ -83,7 +81,7 @@ const ContactPage = () => {
                                         <input
                                             type="text"
                                             name="name"
-                                            placeholder="James Wilson"
+                                            placeholder="Your name"
                                             required
                                             onChange={handleChange}
                                         />
@@ -93,7 +91,7 @@ const ContactPage = () => {
                                         <input
                                             type="tel"
                                             name="phone"
-                                            placeholder="+1..."
+                                            placeholder="+91..."
                                             required
                                             onChange={handleChange}
                                         />
@@ -112,13 +110,13 @@ const ContactPage = () => {
                                 </div>
 
                                 <div className="input-group">
-                                    <label>Service Area</label>
+                                    <label>Service Required</label>
                                     <select name="project" required onChange={handleChange}>
                                         <option value="" disabled selected>Select service...</option>
-                                        <option>Architectural Lighting</option>
-                                        <option>Landscape Design</option>
-                                        <option>Automated Watering</option>
-                                        <option>Holiday Displays</option>
+                                        <option>Buy Property</option>
+                                        <option>Sell Property</option>
+                                        <option>Rental Management</option>
+                                        <option>Investment Advisory</option>
                                     </select>
                                 </div>
 
@@ -127,7 +125,7 @@ const ContactPage = () => {
                                     <textarea
                                         name="message"
                                         rows={4}
-                                        placeholder="Briefly describe your property or project requirements..."
+                                        placeholder="Briefly describe your property requirements or enquiry..."
                                         onChange={handleChange}
                                     />
                                 </div>
