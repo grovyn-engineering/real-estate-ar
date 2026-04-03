@@ -46,7 +46,7 @@ export const PROPERTIES = [
         numericPrice: 21000000,
         location: "Lavasa, Pune",
         type: "Land/Estate",
-        image: "https://images.unsplash.com/photo-1500382017468-9049fee74a62?auto=format&fit=crop&q=80&w=800",
+        image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=800",
         gallery: [
             "https://images.unsplash.com/photo-1500382017468-9049fee74a62?auto=format&fit=crop&q=80&w=1200",
             "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=1200",
@@ -65,7 +65,7 @@ export const PROPERTIES = [
         numericPrice: 18000000,
         location: "Indiranagar, Bangalore",
         type: "Flat",
-        image: "https://images.unsplash.com/photo-1600607687940-47a000df3bd9?auto=format&fit=crop&q=80&w=800",
+        image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&q=80&w=800",
         gallery: [
             "https://images.unsplash.com/photo-1600607687940-47a000df3bd9?auto=format&fit=crop&q=80&w=1200",
             "https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&q=80&w=1200",

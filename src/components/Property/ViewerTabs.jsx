@@ -36,7 +36,7 @@ function VRComingSoon({ images }) {
 
 const ViewerTabs = ({ property }) => {
     const vrProperty = property.vrId ? getProperty(property.vrId) : null;
-    const visibleTabs = BASE_TABS;
+    const visibleTabs = vrProperty ? BASE_TABS : BASE_TABS.filter(t => t.id !== '3d');
 
     const [activeTab, setActiveTab] = useState(vrProperty ? 'vr' : 'gallery');
     const images = property.gallery || [property.image];
