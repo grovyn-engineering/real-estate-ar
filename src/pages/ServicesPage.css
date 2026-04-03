@@ -132,17 +132,28 @@
 @media (max-width: 1024px) {
     .services-content-grid {
         grid-template-columns: 1fr;
+        gap: 2rem;
     }
 }
 
 @media (max-width: 768px) {
     .service-refined-card {
         padding: 2rem;
+        gap: 2rem;
+    }
+
+    .service-card-body h3 {
+        font-size: 1.5rem;
     }
 
     .strategic-impact-block {
         flex-direction: column;
         text-align: center;
         padding: 3rem 2rem;
+        gap: 2.5rem;
+    }
+
+    .services-content-grid {
+        margin-bottom: 5rem;
     }
 }

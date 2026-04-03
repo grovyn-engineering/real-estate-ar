@@ -7,6 +7,7 @@ import CatalogPage from './pages/CatalogPage'
 import ProjectsPage from './pages/ProjectsPage'
 import ServicesPage from './pages/ServicesPage'
 import ContactPage from './pages/ContactPage'
+import VRPage from './pages/VRPage'
 import Footer from './components/Layout/Footer'
 import OpeningSequence from './components/OpeningSequence/OpeningSequence'
 import './App.css'
@@ -32,18 +33,23 @@ function AppContent() {
     return (
         <>
             {showOpening && <OpeningSequence onComplete={handleOpeningComplete} />}
-            <div className="app-main">
-                <Navbar />
-                <Routes>
-                    <Route path="/" element={<LandingPage />} />
-                    <Route path="/services" element={<ServicesPage />} />
-                    <Route path="/catalog" element={<CatalogPage />} />
-                    <Route path="/projects" element={<ProjectsPage />} />
-                    <Route path="/contact" element={<ContactPage />} />
-                    <Route path="/property/:id" element={<PropertyDetails />} />
-                </Routes>
-                <Footer />
-            </div>
+            <Routes>
+                <Route path="/vr/:id" element={<VRPage />} />
+                <Route path="*" element={
+                    <div className="app-main">
+                        <Navbar />
+                        <Routes>
+                            <Route path="/" element={<LandingPage />} />
+                            <Route path="/services" element={<ServicesPage />} />
+                            <Route path="/catalog" element={<CatalogPage />} />
+                            <Route path="/projects" element={<ProjectsPage />} />
+                            <Route path="/contact" element={<ContactPage />} />
+                            <Route path="/property/:id" element={<PropertyDetails />} />
+                        </Routes>
+                        <Footer />
+                    </div>
+                } />
+            </Routes>
         </>
     );
 }

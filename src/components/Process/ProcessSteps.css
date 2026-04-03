@@ -270,7 +270,11 @@
 }
 
 @media (max-width: 768px) {
+    .process-section { padding: 6rem 0; }
     .process-grid { grid-template-columns: 1fr; }
-    .process-card { grid-column: span 1 !important; min-height: 360px; }
+    .process-card { grid-column: span 1 !important; min-height: 320px; }
     .process-3-content, .process-5-content { flex-direction: column; gap: 2rem; }
+    .process-3-profile img { width: 100px; height: 100px; }
+    .process-card { padding: 2rem; }
+    .process-main-title { font-size: 1.8rem; }
 }

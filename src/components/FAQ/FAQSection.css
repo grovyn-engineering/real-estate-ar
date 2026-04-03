@@ -126,10 +126,23 @@
 }
 
 @media (max-width: 768px) {
+    .faq-section { padding: 6rem 0; }
+    .faq-header { margin-bottom: 3.5rem; }
     .faq-question {
         padding: 1.4rem 1.5rem;
         gap: 1rem;
     }
     .faq-question h3 { font-size: 0.95rem; }
     .faq-answer { padding: 0 1.5rem 0 4rem; }
+    .faq-title { font-size: 1.8rem; }
+}
+
+@media (max-width: 480px) {
+    .faq-question {
+        gap: 0.8rem;
+        padding: 1.2rem 1.2rem;
+    }
+    .faq-answer { padding: 0 1.2rem 0 3.5rem; }
+    .faq-num { width: 30px; height: 30px; font-size: 0.75rem; }
+    .faq-icon { width: 30px; height: 30px; }
 }

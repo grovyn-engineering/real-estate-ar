@@ -179,7 +179,7 @@
 @media (max-width: 1200px) {
     .details-refined-grid {
         grid-template-columns: 1fr;
-        gap: 4rem;
+        gap: 3rem;
     }
 
     .details-sidebar-sticky {
@@ -187,12 +187,45 @@
     }
 }
 
+@media (max-width: 768px) {
+    .details-refined-grid {
+        gap: 2.5rem;
+        margin-bottom: 5rem;
+    }
+
+    .interactive-viewer-box {
+        margin-bottom: 3rem;
+        padding: 1.25rem !important;
+    }
+
+    .property-tour-wrapper {
+        margin-bottom: 3rem;
+        padding: 1.25rem !important;
+    }
+
+    .project-extensive-description p {
+        font-size: 1rem;
+        margin-bottom: 3rem;
+    }
+}
+
 @media (max-width: 600px) {
     .technical-specs-grid {
         grid-template-columns: 1fr;
+        gap: 1.2rem;
+        margin-bottom: 3rem;
     }
 
     .concierge-card {
         padding: 2rem !important;
+    }
+
+    .highlights-pills {
+        gap: 0.6rem;
+    }
+
+    .highlight-pill {
+        font-size: 0.82rem;
+        padding: 0.5rem 1.1rem;
     }
 }
