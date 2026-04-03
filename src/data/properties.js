@@ -6,6 +6,7 @@ export const PROPERTIES = [
         numericPrice: 42000000,
         location: "Bandra West, Mumbai",
         type: "Penthouse",
+        vrId: "property-101",
         image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=800",
         gallery: [
             "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1200",
@@ -25,6 +26,7 @@ export const PROPERTIES = [
         numericPrice: 85000000,
         location: "Alibaug, Maharashtra",
         type: "Villa",
+        vrId: "property-202",
         image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&q=80&w=800",
         gallery: [
             "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&q=80&w=1200",

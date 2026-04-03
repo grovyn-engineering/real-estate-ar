@@ -157,11 +157,19 @@
     }
 }
 
+@media (max-width: 768px) {
+    .impact-section { padding: 6rem 0; }
+    .impact-header { margin-bottom: 3.5rem; }
+}
+
 @media (max-width: 600px) {
     .impact-stats-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
     }
+    .impact-stat-card { padding: 1.5rem; }
+    .stat-value { font-size: 1.8rem; }
     .impact-map-wrapper {
-        height: 280px;
+        height: 260px;
     }
 }

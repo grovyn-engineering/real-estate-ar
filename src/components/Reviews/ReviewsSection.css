@@ -230,3 +230,10 @@
     .reviews-container { flex-direction: column; gap: 4rem; }
     .reviews-right, .reviews-left { width: 100%; }
 }
+
+@media (max-width: 600px) {
+    .reviews-section { padding: 6rem 0; }
+    .reviews-card { padding: 2rem; }
+    .card-header { flex-direction: column; gap: 1.5rem; }
+    .reviews-main-img { height: 280px; }
+}

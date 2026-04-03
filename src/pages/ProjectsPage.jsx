@@ -64,6 +64,7 @@ const ProjectsPage = () => {
             title="Case Studies"
             subtitle="A selection of our most notable transactions across India — from private sales to multi-property acquisitions."
             bgImage="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80"
+            label="Success Stories"
         >
             <div className="case-studies-list">
                 {PROJECTS_DATA.map((project, index) => {

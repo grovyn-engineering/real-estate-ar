@@ -152,9 +152,11 @@
 
 @media (max-width: 1024px) {
     .property-type-cards-grid { grid-template-columns: repeat(2, 1fr); }
-    .property-types-header { flex-direction: column; align-items: flex-start; }
+    .property-types-header { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
 }
 
 @media (max-width: 640px) {
     .property-type-cards-grid { grid-template-columns: 1fr; }
+    .property-types-section { padding: 6rem 0; }
+    .property-types-header { margin-bottom: 3rem; }
 }

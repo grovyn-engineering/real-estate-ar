@@ -232,10 +232,14 @@
     .case-study-row { flex-direction: column; gap: 3rem; align-items: flex-start; }
     .case-study-row.reverse { flex-direction: column; }
     .case-study-media { width: 100%; }
+    .case-studies-list { gap: 6rem; }
 }
 
 @media (max-width: 768px) {
-    .case-content-grid { grid-template-columns: 1fr; }
-    .method-grid { grid-template-columns: 1fr; text-align: center; }
+    .case-content-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .method-grid { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
     .methodology-block { padding: 3rem 1.5rem !important; }
+    .case-study-info h2 { font-size: 1.8rem; }
+    .case-studies-list { gap: 5rem; margin-bottom: 5rem; }
+    .case-stats-row { gap: 1.5rem; }
 }

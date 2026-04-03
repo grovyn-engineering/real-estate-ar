@@ -15,16 +15,42 @@ function ViewerLoader({ label }) {
   );
 }
 
-export default function VRViewer({ property }) {
+function EmbedTopBar({ mode, currentRoom }) {
+  return (
+    <div className="flex items-center justify-between px-4 py-2.5 bg-black/80 backdrop-blur z-10 flex-shrink-0">
+      <span className="text-white/60 text-xs font-bold uppercase tracking-widest">Virtual Tour</span>
+      {currentRoom && mode === "360" && (
+        <span className="text-white/85 text-xs font-medium px-3 py-1 bg-white/10 rounded-full">
+          {currentRoom.name}
+        </span>
+      )}
+      {mode === "3d" && (
+        <span className="text-white/85 text-xs font-medium px-3 py-1 bg-white/10 rounded-full">3D Model</span>
+      )}
+      {mode === "floorplan" && (
+        <span className="text-white/85 text-xs font-medium px-3 py-1 bg-white/10 rounded-full">Floor Plan</span>
+      )}
+    </div>
+  );
+}
+
+export default function VRViewer({ property, embedded = false }) {
   const [mode, setMode]          = useState("360");
   const [currentRoomId, setRoom] = useState(property.vr.rooms[0]?.id ?? "");
   const currentRoom              = property.vr.rooms.find((r) => r.id === currentRoomId);
 
-  return (
-    <div className="fixed inset-0 flex flex-col bg-black">
-      <VRTopBar property={property} currentRoom={currentRoom} showRoom={mode === "360"} />
+  const containerClass = embedded
+    ? "relative w-full h-full flex flex-col bg-black overflow-hidden"
+    : "fixed inset-0 flex flex-col bg-black";
 
-      <div className="flex-1 relative">
+  return (
+    <div className={containerClass}>
+      {embedded
+        ? <EmbedTopBar mode={mode} currentRoom={currentRoom} />
+        : <VRTopBar property={property} currentRoom={currentRoom} showRoom={mode === "360"} />
+      }
+
+      <div className="flex-1 relative min-h-0">
         <Suspense fallback={<ViewerLoader label="Loading 360° Tour..." />}>
           {mode === "360" && (
             <Viewer360 rooms={property.vr.rooms} currentRoomId={currentRoomId} onRoomChange={setRoom} />

@@ -45,6 +45,7 @@ const ServicesPage = () => {
             title="Our Services"
             subtitle="Comprehensive real estate solutions for buyers, sellers, landlords and investors."
             bgImage="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600&q=80"
+            label="What We Do"
         >
             <div className="services-content-grid">
                 {SERVICES_DATA.map((service, idx) => (
