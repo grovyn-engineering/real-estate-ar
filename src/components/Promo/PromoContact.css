@@ -200,6 +200,13 @@
 
 @media (max-width: 1024px) {
     .promo-card { flex-direction: column; padding: 3rem 2rem; }
-    .promo-left { width: 100%; height: 320px; }
+    .promo-left { width: 100%; height: 300px; }
     .promo-form { flex-direction: column; }
+}
+
+@media (max-width: 600px) {
+    .promo-card { padding: 2.5rem 1.5rem; gap: 2.5rem; }
+    .promo-left { height: 240px; }
+    .promo-title { font-size: 1.7rem; }
+    .promo-section { padding: 6rem 0; }
 }

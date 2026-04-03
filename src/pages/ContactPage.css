@@ -79,10 +79,15 @@
     gap: 0.8rem;
     background: var(--bg-card);
     border: 1px solid var(--border-color);
-    padding: 0.6rem 1.2rem;
+    padding: 0.7rem 1.2rem;
     border-radius: 50px;
     font-size: 0.85rem;
     color: var(--text-main);
+    transition: border-color 0.2s;
+}
+
+.info-pill:hover {
+    border-color: rgba(184, 144, 42, 0.3);
 }
 
 /* Form Styling */
@@ -133,20 +138,32 @@
 .input-group select,
 .input-group textarea {
     background: var(--bg-main);
-    border: 1px solid var(--border-color);
-    padding: 1rem;
-    border-radius: 8px;
+    border: 1.5px solid var(--border-color);
+    padding: 0.9rem 1rem;
+    border-radius: 10px;
     color: var(--text-main);
     font-size: 0.95rem;
     font-family: inherit;
     outline: none;
-    transition: border-color 0.3s;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    width: 100%;
 }
 
 .input-group input:focus,
 .input-group select:focus,
 .input-group textarea:focus {
     border-color: var(--accent-gold);
+    box-shadow: 0 0 0 3px rgba(184, 144, 42, 0.1);
+}
+
+.input-group select {
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
 }
 
 .form-disclaimer {
@@ -194,16 +211,43 @@
     }
 }
 
+@media (max-width: 768px) {
+    .contact-refined-split {
+        gap: 3rem;
+        margin-bottom: 5rem;
+    }
+
+    .contact-lead {
+        font-size: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .contact-features-mini {
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+}
+
 @media (max-width: 600px) {
     .input-row {
         grid-template-columns: 1fr;
+        gap: 1.2rem;
     }
 
     .contact-form-container {
-        padding: 2.5rem !important;
+        padding: 2rem !important;
     }
 
     .contact-text-content h2 {
-        font-size: 2.2rem;
+        font-size: 2rem;
+    }
+
+    .contact-info-pills {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .info-pill {
+        border-radius: 12px;
     }
 }

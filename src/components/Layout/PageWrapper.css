@@ -3,6 +3,27 @@
     background-color: var(--bg-main);
 }
 
+.page-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.page-hero-label {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent-gold);
+    margin-bottom: 1rem;
+}
+
 .page-content {
-    padding: 6rem 0 10rem;
+    padding: 5rem 0 10rem;
+}
+
+@media (max-width: 768px) {
+    .page-content {
+        padding: 3.5rem 0 7rem;
+    }
 }

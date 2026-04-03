@@ -33,6 +33,7 @@ const CatalogPage = () => {
             title="Property Portfolio"
             subtitle="Explore our curated collection of premium homes, villas, penthouses and plots across India."
             bgImage="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1600&q=80"
+            label="Our Collection"
         >
             <div className="portfolio-filters glass-card">
                 <div className="search-box">
@@ -81,14 +82,14 @@ const CatalogPage = () => {
                     {filtered.map(project => (
                         <Link to={`/property/${project.id}`} key={project.id} className="portfolio-card">
                             <div className="portfolio-card-img">
-                                <img src={project.image} alt={project.title} />
+                                <img src={project.image} alt={project.title} loading="lazy" />
                                 <div className="portfolio-badge">{project.type}</div>
                                 <div className="portfolio-price-badge">{project.price}</div>
                             </div>
                             <div className="portfolio-card-content">
                                 <div className="portfolio-card-meta">
                                     <span className="portfolio-location">
-                                        <MapPin size={13} /> {project.location}
+                                        <MapPin size={12} /> {project.location}
                                     </span>
                                 </div>
                                 <h3>{project.title}</h3>

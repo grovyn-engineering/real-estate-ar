@@ -185,7 +185,14 @@
     .final-img-container { aspect-ratio: 16/9; }
 }
 
+@media (max-width: 768px) {
+    .final-cta-section { padding: 8rem 0; }
+}
+
 @media (max-width: 600px) {
+    .final-cta-section { padding: 6rem 0; }
     .final-cta-actions { flex-direction: column; }
     .btn-primary-luxe, .btn-outline-luxe { justify-content: center; }
+    .milestones-row { flex-direction: column; gap: 1.5rem; }
+    .final-cta-title { font-size: 1.8rem; }
 }

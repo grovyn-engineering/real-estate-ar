@@ -5,7 +5,7 @@
     right: 0;
     z-index: 1000;
     padding: 1.5rem 0;
-    transition: all 0.4s ease;
+    transition: padding 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;
 }
 
 /* ── Unscrolled state (sits over dark hero) ── */
@@ -48,11 +48,12 @@
 }
 
 .navbar-premium.scrolled {
-    padding: 1rem 0;
-    background: rgba(248, 247, 244, 0.95);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+    padding: 0.85rem 0;
+    background: rgba(248, 247, 244, 0.97);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.07);
 }
 
 .nav-container {
@@ -154,15 +155,15 @@
 .mobile-menu-overlay {
     position: fixed;
     inset: 0;
-    background: var(--bg-main);
+    background: #f8f7f4;
     z-index: 1050;
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.4s ease;
-    transform: translateY(-20px);
+    transition: opacity 0.35s ease, visibility 0.35s ease, transform 0.35s ease;
+    transform: translateY(-16px);
 }
 
 .mobile-menu-overlay.open {

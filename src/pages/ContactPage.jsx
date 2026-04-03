@@ -19,6 +19,7 @@ const ContactPage = () => {
             title="Get in Touch"
             subtitle="Let's discuss your vision. Our specialists are ready to provide a detailed consultation for your property."
             bgImage="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80"
+            label="Speak to an Advisor"
         >
             <div className="contact-refined-split">
                 <div className="contact-text-content">

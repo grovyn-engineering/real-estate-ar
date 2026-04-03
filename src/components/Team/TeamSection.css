@@ -121,10 +121,14 @@
 }
 
 @media (max-width: 1024px) {
-    .team-grid { grid-template-columns: repeat(2, 1fr); }
+    .team-grid { grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
     .team-header { flex-direction: column; align-items: flex-start; }
 }
 
 @media (max-width: 600px) {
-    .team-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .team-section { padding: 6rem 0; }
+    .team-grid { grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+    .team-info { padding: 0.8rem 0.8rem 0.8rem 1rem; }
+    .team-text h4 { font-size: 0.82rem; }
+    .team-text p { font-size: 0.68rem; }
 }

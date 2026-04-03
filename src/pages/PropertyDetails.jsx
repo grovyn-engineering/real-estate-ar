@@ -3,7 +3,6 @@ import { useParams, Link } from 'react-router-dom';
 import { ChevronLeft, Phone, Mail, Calendar, Layers, Zap, ArrowUpRight } from 'lucide-react';
 import PageWrapper from '../components/Layout/PageWrapper';
 import ViewerTabs from '../components/Property/ViewerTabs';
-import PropertyTour from '../components/PropertyTour';
 import { PROPERTIES } from '../data/properties';
 import './PropertyDetails.css';
 
@@ -36,10 +35,6 @@ const PropertyDetails = () => {
 
                     <div className="interactive-viewer-box glass-card">
                         <ViewerTabs property={property} />
-                    </div>
-
-                    <div className="property-tour-wrapper glass-card">
-                        <PropertyTour />
                     </div>
 
                     <div className="project-extensive-description">

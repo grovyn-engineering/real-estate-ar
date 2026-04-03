@@ -62,6 +62,96 @@
     overflow: hidden;
 }
 
+.vr-embed-container {
+    width: 100%;
+    height: 520px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background: #000;
+}
+
+.fullscreen-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.45rem 1rem;
+    border-radius: var(--radius-pill);
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #fff;
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: background 0.2s ease, border-color 0.2s ease;
+    white-space: nowrap;
+}
+
+.fullscreen-btn:hover {
+    background: #2a2a2a;
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+.vr-coming-soon {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    min-height: 380px;
+    padding: 2rem;
+    text-align: center;
+    background: var(--bg-subtle);
+}
+
+.vr-coming-soon-mosaic {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2px;
+}
+
+.vr-coming-soon-mosaic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.45) saturate(0.7);
+}
+
+.vr-coming-soon-badge {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.45rem 1.1rem;
+    border-radius: var(--radius-pill);
+    background: rgba(184, 144, 42, 0.18);
+    border: 1px solid rgba(184, 144, 42, 0.45);
+    color: var(--gold);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+}
+
+.vr-coming-soon p {
+    position: relative;
+    z-index: 2;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 340px;
+    line-height: 1.6;
+    margin: 0;
+}
+
 @media (max-width: 600px) {
     .viewer-tabs-header {
         flex-direction: column;

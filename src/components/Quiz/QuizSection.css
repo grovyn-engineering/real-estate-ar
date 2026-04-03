@@ -360,7 +360,10 @@
 }
 
 @media (max-width: 600px) {
-    .quiz-title { font-size: 1.8rem; }
-    .quiz-options { grid-template-columns: 1fr; }
-    .quiz-footer { flex-direction: column; gap: 2rem; align-items: flex-start; }
+    .quiz-title { font-size: 1.75rem; }
+    .quiz-options { grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+    .quiz-footer { flex-direction: column; gap: 1.5rem; align-items: flex-start; }
+    .quiz-result-card { padding: 2.5rem 2rem; }
+    .result-card-images { min-height: 200px; }
+    .result-card-images img { width: 160px; }
 }
