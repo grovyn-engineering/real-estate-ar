@@ -133,3 +133,13 @@
 .auth-footer button:hover {
     text-decoration: underline;
 }
+
+@media (max-width: 520px) {
+    .auth-modal {
+        padding: 2rem 1.5rem;
+        border-radius: 14px;
+    }
+    .auth-header h2 {
+        font-size: 1.5rem;
+    }
+}

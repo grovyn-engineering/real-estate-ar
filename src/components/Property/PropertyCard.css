@@ -106,3 +106,27 @@
     background: var(--primary);
     color: #000;
 }
+
+@media (max-width: 768px) {
+    .card-media {
+        height: 300px;
+    }
+    .price-tag {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-media {
+        height: 240px;
+    }
+    .price-tag {
+        font-size: 1.2rem;
+    }
+    .card-bottom-specs {
+        padding: 0.75rem;
+    }
+    .spec-val {
+        font-size: 0.88rem;
+    }
+}

@@ -98,7 +98,7 @@ export const properties = [
           id: "hall",
           name: "Living Room",
           panorama: "/360/glasshouse_interior_1k.exr",
-          model: "/models/living_room/scene.gltf",
+          model: "/models/living/scene.gltf",
           bounds: [0, 0, 7, 5],
           hotspots: [
             {
@@ -119,7 +119,7 @@ export const properties = [
           id: "bedroom",
           name: "Master Bedroom",
           panorama: "/360/brown_photostudio_07_2k.exr",
-          model: "/models/modern_bedroom/scene.gltf",
+          model: "/models/bed/scene.gltf",
           bounds: [8, 0, 5, 5],
           hotspots: [
             {
@@ -140,7 +140,7 @@ export const properties = [
           id: "garden",
           name: "Kitchen",
           panorama: "/360/blinds_2k.exr",
-          model: "/models/kitchen/scene.gltf",
+          model: "/models/kitchen_room/scene.gltf",
           bounds: [0, 6, 7, 4],
           hotspots: [
             {

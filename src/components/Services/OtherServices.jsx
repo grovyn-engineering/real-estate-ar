@@ -13,7 +13,7 @@ const SERVICES = [
     {
         title: 'Sell Property',
         desc: 'Get the best market value with our proven marketing strategy and expert negotiation.',
-        img: 'https://images.unsplash.com/photo-1558904541-efa843a96f09?w=600&q=80',
+        img: 'https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=600&q=80',
         link: '/services'
     },
     {

@@ -28,7 +28,7 @@ const PROPERTY_TYPES = [
     },
     {
         title: 'Private Estates',
-        img: 'https://images.unsplash.com/photo-1500382017468-9049fee74a62?w=600&q=80',
+        img: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=80',
         bullets: [
             'Vast land parcels with complete privacy and seclusion',
             'Build your dream home or invest in plotted development',

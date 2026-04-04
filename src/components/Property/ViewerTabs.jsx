@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Image, Box, MapPin, ScanEye, Maximize2 } from 'lucide-react';
+import { Image, MapPin, ScanEye, Maximize2, Compass } from 'lucide-react';
 import GalleryView from './GalleryView';
-import ThreeDView from './ThreeDView';
 import MapView from './MapView';
+import Mini360Viewer from './Mini360Viewer';
 import VRViewer from '../vr/VRViewer';
 import { getProperty } from '../../lib/properties';
 import './ViewerTabs.css';
 
 const BASE_TABS = [
     { id: 'gallery', label: 'Gallery', icon: Image, hint: 'Browse property photos' },
-    { id: 'vr', label: 'Virtual Tour', icon: ScanEye, hint: '360° rooms, 3D model & floor plan' },
-    { id: '3d', label: '3D Model', icon: Box, hint: 'Explore the interior in 3D' },
+    { id: 'vr', label: 'Virtual Tour', icon: ScanEye, hint: '360° rooms & floor plan' },
     { id: 'map', label: 'Location', icon: MapPin, hint: 'Map view & directions' },
 ];
 
@@ -36,7 +35,11 @@ function VRComingSoon({ images }) {
 
 const ViewerTabs = ({ property }) => {
     const vrProperty = property.vrId ? getProperty(property.vrId) : null;
-    const visibleTabs = BASE_TABS;
+    const has360 = !!property.panorama360;
+    let visibleTabs = [...BASE_TABS];
+    if (has360) {
+        visibleTabs = [...visibleTabs, { id: '360', label: '360° View', icon: Compass, hint: 'Drag to explore the space' }];
+    }
 
     const [activeTab, setActiveTab] = useState(vrProperty ? 'vr' : 'gallery');
     const images = property.gallery || [property.image];
@@ -81,16 +84,18 @@ const ViewerTabs = ({ property }) => {
                         : <VRComingSoon images={images} />
                 )}
 
-                {activeTab === '3d' && (
-                    <ThreeDView />
-                )}
-
                 {activeTab === 'map' && (
                     <MapView
                         coordinates={property.coordinates}
                         title={property.title}
                         location={property.location}
                     />
+                )}
+
+                {activeTab === '360' && has360 && (
+                    <div style={{ width: '100%', height: '420px', borderRadius: '12px', overflow: 'hidden' }}>
+                        <Mini360Viewer src={property.panorama360} />
+                    </div>
                 )}
             </div>
         </div>

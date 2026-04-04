@@ -6,8 +6,8 @@ import './QuizSection.css';
 const PROPERTY_TYPES = [
     { id: 'penthouse', title: 'Penthouse', icon: <Building2 size={28} />, img: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=300&q=80' },
     { id: 'villa', title: 'Villa', icon: <Home size={28} />, img: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=300&q=80' },
-    { id: 'estate', title: 'Plot/Land', icon: <TreePine size={28} />, img: 'https://images.unsplash.com/photo-1500382017468-9049fee74a62?w=300&q=80' },
-    { id: 'commercial', title: 'Commercial', icon: <Briefcase size={28} />, img: null },
+    { id: 'estate', title: 'Plot/Land', icon: <TreePine size={28} />, img: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&q=80' },
+    { id: 'commercial', title: 'Commercial', icon: <Briefcase size={28} />, img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=300&q=80' },
 ];
 
 const BUDGETS = [

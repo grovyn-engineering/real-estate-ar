@@ -172,4 +172,19 @@
         gap: 0;
         padding: 0.6rem 0.9rem;
     }
+
+    .vr-embed-container {
+        height: 360px;
+    }
+
+    .vr-coming-soon {
+        min-height: 280px;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .vr-embed-container {
+        height: 280px;
+    }
 }
