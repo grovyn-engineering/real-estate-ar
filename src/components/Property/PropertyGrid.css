@@ -40,3 +40,9 @@
         gap: 2rem;
     }
 }
+
+@media (max-width: 600px) {
+    .property-grid {
+        grid-template-columns: 1fr;
+    }
+}

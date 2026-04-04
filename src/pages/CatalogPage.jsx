@@ -82,7 +82,7 @@ const CatalogPage = () => {
                     {filtered.map(project => (
                         <Link to={`/property/${project.id}`} key={project.id} className="portfolio-card">
                             <div className="portfolio-card-img">
-                                <img src={project.image} alt={project.title} loading="lazy" />
+                                <img src={project.image} alt={project.title} />
                                 <div className="portfolio-badge">{project.type}</div>
                                 <div className="portfolio-price-badge">{project.price}</div>
                             </div>

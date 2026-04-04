@@ -1,6 +1,6 @@
 export default function VRModeBar({ mode, has3D, onModeChange }) {
   return (
-    <div className="flex items-center justify-center gap-2 px-4 py-3 bg-black/70 backdrop-blur z-10">
+    <div className="flex flex-wrap items-center justify-center gap-2 px-4 py-3 bg-black/70 backdrop-blur z-10">
       <ModeButton active={mode === "360"} onClick={() => onModeChange("360")} icon="🔭" label="360° Tour" />
       <ModeButton active={mode === "3d"} onClick={() => onModeChange("3d")} icon="🧊" label="3D Model" disabled={!has3D} disabledReason="No 3D model available" />
       <ModeButton active={mode === "floorplan"} onClick={() => onModeChange("floorplan")} icon="📐" label="Floor Plan" />
