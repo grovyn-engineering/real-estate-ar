@@ -55,10 +55,13 @@ const PromoContact = () => {
                             <form className="promo-form" onSubmit={handleSubmit}>
                                 <input
                                     type="tel"
-                                    placeholder="+91 ___________"
+                                    placeholder="Enter your phone number"
                                     className="promo-input"
                                     value={phone}
-                                    onChange={(e) => setPhone(e.target.value)}
+                                    onChange={(e) => {
+                                        const value = e.target.value.replace(/\D/g, '');
+                                        setPhone(value);
+                                    }}
                                     required
                                 />
                                 <button type="submit" className="promo-submit">

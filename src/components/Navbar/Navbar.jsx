@@ -11,19 +11,29 @@ const Navbar = () => {
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 20);
+            if (isMenuOpen) setIsMenuOpen(false);
         };
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    }, [isMenuOpen]);
 
     useEffect(() => {
         setIsMenuOpen(false);
     }, [location]);
 
+    useEffect(() => {
+        if (isMenuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+        return () => { document.body.style.overflow = ''; };
+    }, [isMenuOpen]);
+
     const isActive = (path) => location.pathname === path;
 
     return (
-        <nav className={`navbar-premium ${isScrolled ? 'scrolled' : ''}`}>
+        <nav className={`navbar-premium ${isScrolled ? 'scrolled' : ''} ${isMenuOpen ? 'is-menu-open' : ''}`}>
             <div className="nav-container container">
                 <div className="nav-logo">
                     <Link to="/" className="brand-name serif">

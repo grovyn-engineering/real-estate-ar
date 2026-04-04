@@ -1,6 +1,5 @@
 .quiz-section {
     background-color: var(--bg-main);
-    padding: 8rem 0;
 }
 
 .quiz-tag {
@@ -12,7 +11,7 @@
     color: var(--accent-gold);
     background: var(--accent-gold-soft);
     border: 1px solid rgba(184, 144, 42, 0.2);
-    padding: 0.4rem 1rem;
+    padding: 20px;
     border-radius: 50px;
     margin-bottom: 1.5rem;
     width: fit-content;
@@ -308,9 +307,22 @@
     transition: all 0.4s ease;
 }
 
-.img-1 { transform: rotate(-12deg) translateX(-40px); z-index: 1; opacity: 0.55; }
-.img-2 { transform: rotate(8deg) translateX(40px); z-index: 2; opacity: 0.75; }
-.img-3 { transform: rotate(-3deg) translateY(-20px); z-index: 3; }
+.img-1 {
+    transform: rotate(-12deg) translateX(-40px);
+    z-index: 1;
+    opacity: 0.55;
+}
+
+.img-2 {
+    transform: rotate(8deg) translateX(40px);
+    z-index: 2;
+    opacity: 0.75;
+}
+
+.img-3 {
+    transform: rotate(-3deg) translateY(-20px);
+    z-index: 3;
+}
 
 .quiz-result-card:hover .img-3 {
     transform: rotate(0deg) translateY(-36px) scale(1.04);
@@ -355,15 +367,42 @@
         flex-direction: column;
         gap: 4rem;
     }
-    .quiz-right { width: 100%; min-height: 500px; }
-    .quiz-options { grid-template-columns: repeat(2, 1fr); }
+
+    .quiz-right {
+        width: 100%;
+        min-height: 500px;
+    }
+
+    .quiz-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 600px) {
-    .quiz-title { font-size: 1.75rem; }
-    .quiz-options { grid-template-columns: 1fr 1fr; gap: 0.8rem; }
-    .quiz-footer { flex-direction: column; gap: 1.5rem; align-items: flex-start; }
-    .quiz-result-card { padding: 2.5rem 2rem; }
-    .result-card-images { min-height: 200px; }
-    .result-card-images img { width: 160px; }
+    .quiz-title {
+        font-size: 1.75rem;
+    }
+
+    .quiz-options {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8rem;
+    }
+
+    .quiz-footer {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: flex-start;
+    }
+
+    .quiz-result-card {
+        padding: 2.5rem 2rem;
+    }
+
+    .result-card-images {
+        min-height: 200px;
+    }
+
+    .result-card-images img {
+        width: 160px;
+    }
 }
