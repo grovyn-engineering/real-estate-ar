@@ -48,7 +48,7 @@ export const PROPERTIES = [
         type: "Land/Estate",
         image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=800",
         gallery: [
-            "https://images.unsplash.com/photo-1500382017468-9049fee74a62?auto=format&fit=crop&q=80&w=1200",
+            "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&q=80&w=1200",
             "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=1200",
             "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&q=80&w=1200",
             "https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&q=80&w=1200",
@@ -56,7 +56,8 @@ export const PROPERTIES = [
         ],
         description: "Vast land parcels with mountain views — ideal for your custom-built weekend retreat.",
         features: ["5 Acres", "Hill Views", "Gated Community", "Build Permit Ready"],
-        coordinates: [18.4052, 73.5069]
+        coordinates: [18.4052, 73.5069],
+        panorama360: '/360/i1.jpg'
     },
     {
         id: 4,
@@ -67,7 +68,7 @@ export const PROPERTIES = [
         type: "Flat",
         image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&q=80&w=800",
         gallery: [
-            "https://images.unsplash.com/photo-1600607687940-47a000df3bd9?auto=format&fit=crop&q=80&w=1200",
+            "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&q=80&w=1200",
             "https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&q=80&w=1200",
             "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&q=80&w=1200",
             "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&q=80&w=1200",
@@ -75,7 +76,8 @@ export const PROPERTIES = [
         ],
         description: "Modern apartment in Bangalore's most sought-after locality with excellent connectivity.",
         features: ["2 Bedrooms", "2 Bathrooms", "Modular Kitchen", "Club House"],
-        coordinates: [12.9784, 77.6408]
+        coordinates: [12.9784, 77.6408],
+        panorama360: '/360/i2.jpg'
     },
     {
         id: 5,
@@ -90,10 +92,11 @@ export const PROPERTIES = [
             "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&q=80&w=1200",
             "https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&q=80&w=1200",
             "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&q=80&w=1200",
-            "https://images.unsplash.com/photo-1458013925384-4d4df706f1de?auto=format&fit=crop&q=80&w=1200",
+            "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&q=80&w=1200",
         ],
         description: "Tropical villa with direct beach access, infinity pool and stunning sunset views.",
         features: ["4 Bedrooms", "5 Bathrooms", "Beach Access", "Smart Home"],
-        coordinates: [15.5535, 73.7569]
+        coordinates: [15.5535, 73.7569],
+        panorama360: '/360/i3.jpg'
     }
 ];
