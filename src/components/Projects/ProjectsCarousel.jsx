@@ -102,12 +102,11 @@ const ProjectsCarousel = () => {
                     }}
                 >
                     {/* Image */}
-                    <div className="relative overflow-hidden" style={{ minHeight: '260px' }}>
+                    <div className="relative overflow-hidden" style={{ minHeight: '320px' }}>
                         <img
                             src={project.img}
                             alt={project.title}
-                            className="w-full h-full object-cover"
-                            style={{ minHeight: '260px' }}
+                            className="absolute inset-0 w-full h-full object-cover"
                         />
                         <div className="absolute top-5 left-5 z-10">
                             <span
