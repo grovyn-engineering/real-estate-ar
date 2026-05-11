@@ -41,17 +41,16 @@ const Hero = () => {
 
             <div className="hero-content">
                 <div className="hero-main-text">
-                    <span className="hero-label">Premium Indian Real Estate</span>
+                    <span className="hero-label">Where Luxury Meets Lifestyle</span>
 
                     <h1 className="hero-title" ref={titleRef}>
-                        Find Your<br />
-                        <span className="title-accent">Dream</span><br />
-                        Home in India.
+                        More Than a<br />
+                        <span className="title-accent">House</span><br />
+                        It's Your Story
                     </h1>
 
                     <p className="hero-subtitle" ref={descRef}>
-                        We curate India's finest residential properties — from metro apartments and villas
-                        to luxury farmhouses. Expert guidance, RERA compliance, and a seamless experience.
+                       Not just properties — we help you find spaces that match your lifestyle, your vision, and your future
                     </p>
 
                     <div className="hero-cta-row" ref={btnsRef}>
@@ -72,22 +71,23 @@ const Hero = () => {
                                 <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=80&q=80&fit=crop&crop=face" alt="Client" />
                                 <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=80&q=80&fit=crop&crop=face" alt="Client" />
                             </div>
+                            <br/>
                             <p className="stat-text-small">
-                                <strong>1,200+</strong> homeowners<br />across India trust us
+                                <strong>1,200+</strong> happy homeowners<br />across India 
                             </p>
                         </div>
                         <div className="stat-metrics">
                             <div className="metric-item">
                                 <h3>15<span className="metric-plus">+</span></h3>
-                                <p>Years of<br />excellence</p>
+                                <p>Years of<br /> trusted excellence</p>
                             </div>
                             <div className="metric-item">
                                 <h3>₹500<span className="metric-plus">Cr</span></h3>
-                                <p>Transaction<br />volume</p>
+                               <p>Property<br />value delivered</p>
                             </div>
                             <div className="metric-item">
                                 <h3>98<span className="metric-plus">%</span></h3>
-                                <p>Client<br />satisfaction</p>
+                                <p>Client<br />satisfaction <br/>rate </p>
                             </div>
                         </div>
                     </div>

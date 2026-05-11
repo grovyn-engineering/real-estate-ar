@@ -25,6 +25,21 @@
 
 .navbar-premium:not(.scrolled) .nav-links-pill a {
     color: rgba(255, 255, 255, 0.85);
+    position: relative;
+}
+
+.navbar-premium:not(.scrolled) .nav-links-pill a::after {
+    content: '';
+    position: absolute;
+    bottom: 0.35rem;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 60%;
+    height: 2px;
+    background: #ffffff;
+    border-radius: 1px;
+    transition: transform 0.3s ease;
+    transform-origin: center;
 }
 
 .navbar-premium:not(.scrolled) .nav-links-pill a:hover {
@@ -32,10 +47,18 @@
     background: transparent;
 }
 
+.navbar-premium:not(.scrolled) .nav-links-pill a:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
 .navbar-premium:not(.scrolled) .nav-links-pill a.active {
     background: transparent;
     color: #ffffff;
     box-shadow: none;
+}
+
+.navbar-premium:not(.scrolled) .nav-links-pill a.active::after {
+    transform: translateX(-50%) scaleX(1);
 }
 
 .navbar-premium:not(.scrolled) .nav-phone-pill {

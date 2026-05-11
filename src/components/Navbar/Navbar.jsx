@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Phone, Menu, X, ArrowUpRight } from 'lucide-react';
 import './Navbar.css';
+//import logo from "./logo/logo.png";
+
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,7 +31,7 @@ const Navbar = () => {
         }
         return () => { document.body.style.overflow = ''; };
     }, [isMenuOpen]);
-
+//GROVYN<br />PROPERTIES 
     const isActive = (path) => location.pathname === path;
 
     return (
@@ -37,8 +39,7 @@ const Navbar = () => {
             <div className="nav-container container">
                 <div className="nav-logo">
                     <Link to="/" className="brand-name serif">
-                        GROVYN<br />PROPERTIES
-                    </Link>
+                    GROVYN<br />PROPERTIES  </Link>
                 </div>
 
                 <div className="nav-links-pill desktop-only">
