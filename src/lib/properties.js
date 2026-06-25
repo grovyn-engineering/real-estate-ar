@@ -1,3 +1,5 @@
+import { assetUrl } from "@/config/assets";
+
 export const properties = [
   {
     id: "property-101",
@@ -9,15 +11,15 @@ export const properties = [
     beds: 3,
     baths: 2,
     sqft: 1850,
-    thumbnail: "/360/panaromic.jpg",
+    thumbnail: assetUrl("/360/panaromic.jpg"),
     vr: {
-      model: "/models/low-poly-house/scene.gltf",
+      model: assetUrl("/models/low-poly-house/scene.gltf"),
       rooms: [
         {
           id: "living-room",
           name: "Living Room",
-          panorama: "/360/glasshouse_interior_1k.exr",
-          model: "/models/living_room/scene.gltf",
+          panorama: assetUrl("/360/glasshouse_interior_1k.exr"),
+          model: assetUrl("/models/living_room/scene.gltf"),
           bounds: [0, 0, 8, 6],
           hotspots: [
             {
@@ -37,8 +39,8 @@ export const properties = [
         {
           id: "master-bedroom",
           name: "Master Bedroom",
-          panorama: "/360/brown_photostudio_07_2k.exr",
-          model: "/models/modern_bedroom/scene.gltf",
+          panorama: assetUrl("/360/brown_photostudio_07_2k.exr"),
+          model: assetUrl("/models/modern_bedroom/scene.gltf"),
           bounds: [9, 0, 6, 5],
           hotspots: [
             {
@@ -58,8 +60,8 @@ export const properties = [
         {
           id: "kitchen",
           name: "Kitchen",
-          panorama: "/360/blinds_2k.exr",
-          model: "/models/kitchen/scene.gltf",
+          panorama: assetUrl("/360/blinds_2k.exr"),
+          model: assetUrl("/models/kitchen/scene.gltf"),
           bounds: [0, 7, 5, 4],
           hotspots: [
             {
@@ -89,16 +91,16 @@ export const properties = [
     beds: 2,
     baths: 2,
     sqft: 1200,
-    thumbnail: "/360/panaromic.jpg",
+    thumbnail: assetUrl("/360/panaromic.jpg"),
     vr: {
-      model: "/models/modern-apartment/scene.gltf",
+      model: assetUrl("/models/modern-apartment/scene.gltf"),
       modelEmbed: "https://sketchfab.com/models/6e41320708f74a6ba974ff8c26746ed8/embed",
       rooms: [
         {
           id: "hall",
           name: "Living Room",
-          panorama: "/360/glasshouse_interior_1k.exr",
-          model: "/models/living/scene.gltf",
+          panorama: assetUrl("/360/glasshouse_interior_1k.exr"),
+          model: assetUrl("/models/living/scene.gltf"),
           bounds: [0, 0, 7, 5],
           hotspots: [
             {
@@ -118,8 +120,8 @@ export const properties = [
         {
           id: "bedroom",
           name: "Master Bedroom",
-          panorama: "/360/brown_photostudio_07_2k.exr",
-          model: "/models/bed/scene.gltf",
+          panorama: assetUrl("/360/brown_photostudio_07_2k.exr"),
+          model: assetUrl("/models/bed/scene.gltf"),
           bounds: [8, 0, 5, 5],
           hotspots: [
             {
@@ -139,8 +141,8 @@ export const properties = [
         {
           id: "garden",
           name: "Kitchen",
-          panorama: "/360/blinds_2k.exr",
-          model: "/models/kitchen_room/scene.gltf",
+          panorama: assetUrl("/360/blinds_2k.exr"),
+          model: assetUrl("/models/kitchen_room/scene.gltf"),
           bounds: [0, 6, 7, 4],
           hotspots: [
             {

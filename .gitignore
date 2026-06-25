@@ -1,3 +1,7 @@
+# Large binary assets — host on CDN, do not commit
+public/models/
+public/360/
+
 # Dependencies
 node_modules/
 

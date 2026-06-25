@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import { assetUrl } from "@/config/assets";
 
 function makeLabel(text, hovered) {
   const W = 560, H = 120;
@@ -82,7 +83,7 @@ export default function FloorPlanViewer({ rooms, onEnterRoom }) {
     let splitAxis = "x";
     const modelMeshes = [];
 
-    new GLTFLoader().load("/models/low-poly-house/scene.gltf", (gltf) => {
+    new GLTFLoader().load(assetUrl("/models/low-poly-house/scene.gltf"), (gltf) => {
       const model = gltf.scene;
       model.traverse((child) => {
         if (child.isMesh) {

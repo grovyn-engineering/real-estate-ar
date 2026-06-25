@@ -2,9 +2,10 @@ import React, { useMemo, Suspense } from 'react';
 import * as THREE from 'three';
 import { Canvas } from '@react-three/fiber';
 import { useGLTF, Stage, OrbitControls } from '@react-three/drei';
+import { assetUrl } from '@/config/assets';
 import './ThreeDView.css';
 
-const modelUrl = '/models/Home.glb';
+const modelUrl = assetUrl('/models/Home.glb');
 
 const COLORS = {
     wall: 0xe8e4df,

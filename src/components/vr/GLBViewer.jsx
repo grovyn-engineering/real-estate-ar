@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
@@ -7,10 +7,17 @@ import { buildPlaceholderHouse } from "@/lib/placeholderHouse";
 
 export default function GLBViewer({ modelPath }) {
   const mountRef = useRef(null);
+  const [progress, setProgress] = useState(0);
+  const [loaded, setLoaded] = useState(false);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     if (!mountRef.current) return;
     const container = mountRef.current;
+
+    setProgress(0);
+    setLoaded(false);
+    setError(false);
 
     let rafId;
     let renderer;
@@ -21,7 +28,6 @@ export default function GLBViewer({ modelPath }) {
       const h = container.clientHeight;
       if (!w || !h) return;
 
-      // Disconnect after successful init
       resizeObserver?.disconnect();
 
       const scene = new THREE.Scene();
@@ -32,7 +38,7 @@ export default function GLBViewer({ modelPath }) {
 
       renderer = new THREE.WebGLRenderer({ antialias: true });
       renderer.setSize(w, h);
-      renderer.setPixelRatio(window.devicePixelRatio);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
       renderer.outputColorSpace = THREE.SRGBColorSpace;
       renderer.toneMapping = THREE.ACESFilmicToneMapping;
       renderer.toneMappingExposure = 2.0;
@@ -56,43 +62,59 @@ export default function GLBViewer({ modelPath }) {
         draco.setDecoderPath("https://www.gstatic.com/draco/versioned/decoders/1.5.6/");
         const loader = new GLTFLoader();
         loader.setDRACOLoader(draco);
-        loader.load(modelPath, (gltf) => {
-          const model = gltf.scene;
-          model.traverse((child) => {
-            if (child.isMesh) {
-              child.castShadow = true;
-              child.receiveShadow = true;
+
+        loader.load(
+          modelPath,
+          (gltf) => {
+            const model = gltf.scene;
+            model.traverse((child) => {
+              if (child.isMesh) {
+                child.castShadow = true;
+                child.receiveShadow = true;
+              }
+            });
+
+            const raw = new THREE.Box3().setFromObject(model);
+            const rawSize = new THREE.Vector3(); raw.getSize(rawSize);
+            const rawCenter = new THREE.Vector3(); raw.getCenter(rawCenter);
+            const scale = 10 / Math.max(rawSize.x, rawSize.z);
+            model.scale.setScalar(scale);
+            model.position.sub(rawCenter.multiplyScalar(scale));
+            const grounded = new THREE.Box3().setFromObject(model);
+            model.position.y -= grounded.min.y;
+            scene.add(model);
+
+            const box = new THREE.Box3().setFromObject(model);
+            const size = new THREE.Vector3(); box.getSize(size);
+            const cx = (box.min.x + box.max.x) / 2;
+            const cz = (box.min.z + box.max.z) / 2;
+            const eyeY = box.min.y + Math.min(1.65, size.y * 0.45);
+
+            camera.position.set(cx, eyeY, cz + size.z * 0.15);
+            camera.near = 0.05;
+            camera.far = Math.max(size.x, size.y, size.z) * 6;
+            camera.updateProjectionMatrix();
+
+            controls.target.set(cx, eyeY, cz - size.z * 0.25);
+            controls.minDistance = 0.1;
+            controls.maxDistance = Math.max(size.x, size.z) * 1.5;
+            controls.update();
+
+            setLoaded(true);
+          },
+          (xhr) => {
+            if (xhr.total > 0) {
+              setProgress(Math.round((xhr.loaded / xhr.total) * 100));
             }
-          });
-
-          const raw = new THREE.Box3().setFromObject(model);
-          const rawSize = new THREE.Vector3(); raw.getSize(rawSize);
-          const rawCenter = new THREE.Vector3(); raw.getCenter(rawCenter);
-          const scale = 10 / Math.max(rawSize.x, rawSize.z);
-          model.scale.setScalar(scale);
-          model.position.sub(rawCenter.multiplyScalar(scale));
-          const grounded = new THREE.Box3().setFromObject(model);
-          model.position.y -= grounded.min.y;
-          scene.add(model);
-
-          const box = new THREE.Box3().setFromObject(model);
-          const size = new THREE.Vector3(); box.getSize(size);
-          const cx = (box.min.x + box.max.x) / 2;
-          const cz = (box.min.z + box.max.z) / 2;
-          const eyeY = box.min.y + Math.min(1.65, size.y * 0.45);
-
-          camera.position.set(cx, eyeY, cz + size.z * 0.15);
-          camera.near = 0.05;
-          camera.far  = Math.max(size.x, size.y, size.z) * 6;
-          camera.updateProjectionMatrix();
-
-          controls.target.set(cx, eyeY, cz - size.z * 0.25);
-          controls.minDistance = 0.1;
-          controls.maxDistance = Math.max(size.x, size.z) * 1.5;
-          controls.update();
-        });
+          },
+          () => {
+            setError(true);
+            setLoaded(true);
+          }
+        );
       } else {
         buildPlaceholderHouse(scene);
+        setLoaded(true);
       }
 
       const handleResize = () => {
@@ -112,7 +134,6 @@ export default function GLBViewer({ modelPath }) {
       };
       animate();
 
-      // Store cleanup on container for the effect return
       container._glbCleanup = () => {
         cancelAnimationFrame(rafId);
         window.removeEventListener("resize", handleResize);
@@ -122,7 +143,6 @@ export default function GLBViewer({ modelPath }) {
       };
     };
 
-    // Try immediately; if container has no size yet, watch for it
     setup();
     if (!renderer) {
       resizeObserver = new ResizeObserver(() => { if (!renderer) setup(); });
@@ -137,15 +157,50 @@ export default function GLBViewer({ modelPath }) {
 
   return (
     <div className="relative w-full h-full">
-      <div ref={mountRef} className="w-full h-full" />
-      {!modelPath && (
+      <div
+        ref={mountRef}
+        className="w-full h-full"
+        style={{ opacity: loaded ? 1 : 0, transition: "opacity 0.5s ease" }}
+      />
+
+      {!loaded && (
+        <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#080f20] gap-4">
+          <div className="relative w-16 h-16">
+            <svg className="animate-spin w-16 h-16" viewBox="0 0 64 64" fill="none">
+              <circle cx="32" cy="32" r="28" stroke="rgba(255,255,255,0.1)" strokeWidth="4" />
+              <circle
+                cx="32" cy="32" r="28"
+                stroke="white" strokeWidth="4"
+                strokeLinecap="round"
+                strokeDasharray={`${2 * Math.PI * 28 * progress / 100} ${2 * Math.PI * 28}`}
+                transform="rotate(-90 32 32)"
+              />
+            </svg>
+            <span className="absolute inset-0 flex items-center justify-center text-white text-xs font-bold">
+              {progress}%
+            </span>
+          </div>
+          <p className="text-white/60 text-sm">Loading 3D Model…</p>
+        </div>
+      )}
+
+      {!modelPath && loaded && (
         <div className="absolute top-3 left-1/2 -translate-x-1/2 bg-yellow-500/90 text-black text-xs font-semibold px-3 py-1.5 rounded-full">
           Demo 3D Model — No GLB uploaded for this property
         </div>
       )}
-      <div className="absolute bottom-3 right-3 text-white/40 text-xs">
-        Drag to orbit · Scroll to zoom
-      </div>
+
+      {error && (
+        <div className="absolute top-3 left-1/2 -translate-x-1/2 bg-red-500/90 text-white text-xs font-semibold px-3 py-1.5 rounded-full">
+          Failed to load model
+        </div>
+      )}
+
+      {loaded && (
+        <div className="absolute bottom-3 right-3 text-white/40 text-xs">
+          Drag to orbit · Scroll to zoom
+        </div>
+      )}
     </div>
   );
 }

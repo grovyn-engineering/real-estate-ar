@@ -1,3 +1,5 @@
+import { assetUrl } from "@/config/assets";
+
 export const PROPERTIES = [
     {
         id: 1,
@@ -57,7 +59,7 @@ export const PROPERTIES = [
         description: "Vast land parcels with mountain views — ideal for your custom-built weekend retreat.",
         features: ["5 Acres", "Hill Views", "Gated Community", "Build Permit Ready"],
         coordinates: [18.4052, 73.5069],
-        panorama360: '/360/i1.jpg'
+        panorama360: assetUrl('/360/i1.jpg')
     },
     {
         id: 4,
@@ -77,7 +79,7 @@ export const PROPERTIES = [
         description: "Modern apartment in Bangalore's most sought-after locality with excellent connectivity.",
         features: ["2 Bedrooms", "2 Bathrooms", "Modular Kitchen", "Club House"],
         coordinates: [12.9784, 77.6408],
-        panorama360: '/360/i2.jpg'
+        panorama360: assetUrl('/360/i2.jpg')
     },
     {
         id: 5,
@@ -97,6 +99,6 @@ export const PROPERTIES = [
         description: "Tropical villa with direct beach access, infinity pool and stunning sunset views.",
         features: ["4 Bedrooms", "5 Bathrooms", "Beach Access", "Smart Home"],
         coordinates: [15.5535, 73.7569],
-        panorama360: '/360/i3.jpg'
+        panorama360: assetUrl('/360/i3.jpg')
     }
 ];
