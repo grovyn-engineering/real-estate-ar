@@ -1,0 +1,26 @@
+services:
+
+  # ── Production: assets from Cloudflare R2 CDN ──────────────────────────────
+  app:
+    build:
+      context: .
+      args:
+        VITE_CDN_BASE_URL: ${VITE_CDN_BASE_URL}
+    ports:
+      - "3000:80"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  # ── Dev: assets served from local /public (no CDN needed) ──────────────────
+  app-dev:
+    build:
+      context: .
+      args:
+        VITE_CDN_BASE_URL: ""          # empty = fall back to local /public
+    ports:
+      - "3001:80"
+    profiles: ["dev"]                  # only starts with: docker compose --profile dev up

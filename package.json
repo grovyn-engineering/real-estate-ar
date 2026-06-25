@@ -10,7 +10,11 @@
     "preview": "vite preview",
     "generate-placeholders": "node scripts/generate-placeholder-cubemap.js",
     "compress": "bash scripts/compress-assets.sh",
-    "upload": "node scripts/upload-r2.js"
+    "upload": "node scripts/upload-r2.js",
+    "docker:build": "docker compose build",
+    "docker:up": "docker compose up -d",
+    "docker:down": "docker compose down",
+    "docker:logs": "docker compose logs -f app"
   },
   "dependencies": {
     "@photo-sphere-viewer/core": "^5.14.1",
