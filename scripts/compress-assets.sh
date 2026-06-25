@@ -28,9 +28,10 @@ for arg in "$@"; do
   esac
 done
 
-if ! command -v gltf-transform &>/dev/null; then
-  echo "Installing @gltf-transform/cli..."
-  npm install -g @gltf-transform/cli
+GLTF_TRANSFORM="./node_modules/.bin/gltf-transform"
+if [ ! -f "$GLTF_TRANSFORM" ]; then
+  echo "@gltf-transform/cli not found — run: npm install"
+  exit 1
 fi
 
 # ── 3D Models ────────────────────────────────────────────────────────────────
@@ -47,7 +48,7 @@ if $compress_models && [ -d "$MODELS_DIR" ]; then
     mkdir -p "$outdir"
 
     echo "  → $rel"
-    gltf-transform optimize "$src" "$outdir/${base}.glb" \
+    $GLTF_TRANSFORM optimize "$src" "$outdir/${base}.glb" \
       --compress draco \
       --texture-compress webp \
       --texture-resize 2048 \
