@@ -56,7 +56,7 @@ export const PROPERTIES = [
             "https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&q=80&w=1200",
             "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&q=80&w=1200",
         ],
-        description: "Vast land parcels with mountain views — ideal for your custom-built weekend retreat.",
+        description: "Vast land parcels with mountain views - ideal for your custom-built weekend retreat.",
         features: ["5 Acres", "Hill Views", "Gated Community", "Build Permit Ready"],
         coordinates: [18.4052, 73.5069],
         panorama360: assetUrl('/360/i1.jpg')

@@ -18,7 +18,7 @@ const CASE_DETAILS = [
     },
     {
         challenge: 'An international buyer needed a trusted local advisor to identify the right luxury penthouse and navigate the acquisition process from overseas.',
-        approach: 'We provided end-to-end remote buying support — from curated shortlists and virtual tours to in-person representation, legal coordination, and completion.',
+        approach: 'We provided end-to-end remote buying support - from curated shortlists and virtual tours to in-person representation, legal coordination, and completion.',
         stats: [
             { label: 'Final Sale Price', value: null },
             { label: 'Saved vs. Asking', value: '6.1%' },
@@ -62,7 +62,7 @@ const ProjectsPage = () => {
     return (
         <PageWrapper
             title="Case Studies"
-            subtitle="A selection of our most notable transactions across India — from private sales to multi-property acquisitions."
+            subtitle="A selection of our most notable transactions across India - from private sales to multi-property acquisitions."
             bgImage="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80"
             label="Success Stories"
         >
@@ -128,7 +128,7 @@ const ProjectsPage = () => {
                     <div className="method-item">
                         <div className="method-number">01</div>
                         <h4>Discovery & Strategy</h4>
-                        <p>We begin with an in-depth consultation to understand your goals, timeline, and priorities — then build a tailored transaction strategy around them.</p>
+                        <p>We begin with an in-depth consultation to understand your goals, timeline, and priorities - then build a tailored transaction strategy around them.</p>
                     </div>
                     <div className="method-item">
                         <div className="method-number">02</div>
@@ -138,7 +138,7 @@ const ProjectsPage = () => {
                     <div className="method-item">
                         <div className="method-number">03</div>
                         <h4>Execution & Close</h4>
-                        <p>From first viewing to final signature, we manage every detail — negotiations, legal coordination, and completion — with dedicated white-glove support.</p>
+                        <p>From first viewing to final signature, we manage every detail - negotiations, legal coordination, and completion - with dedicated white-glove support.</p>
                     </div>
                 </div>
             </div>

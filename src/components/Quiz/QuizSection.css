@@ -46,7 +46,7 @@
     color: var(--text-main);
 }
 
-/* Step 1 — Type Cards */
+/* Step 1 - Type Cards */
 .quiz-options {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -130,7 +130,7 @@
     color: var(--accent-gold);
 }
 
-/* Step 2 — Budget Cards */
+/* Step 2 - Budget Cards */
 .quiz-budget-card {
     padding: 1.2rem 1.8rem;
     border: 1.5px solid var(--border-color);

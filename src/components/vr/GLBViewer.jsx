@@ -186,7 +186,7 @@ export default function GLBViewer({ modelPath }) {
 
       {!modelPath && loaded && (
         <div className="absolute top-3 left-1/2 -translate-x-1/2 bg-yellow-500/90 text-black text-xs font-semibold px-3 py-1.5 rounded-full">
-          Demo 3D Model — No GLB uploaded for this property
+          Demo 3D Model - No GLB uploaded for this property
         </div>
       )}
 

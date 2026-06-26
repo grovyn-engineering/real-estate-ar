@@ -9,7 +9,7 @@ const SERVICES_DATA = [
         icon: <Home size={32} />,
         title: 'Property Acquisition',
         label: 'Buy & Invest',
-        desc: 'We guide you through every step of buying a home or investment property — from shortlisting and site visits to offer negotiation and registration. Our advisors have deep local market knowledge across India and exclusive off-market access.',
+        desc: 'We guide you through every step of buying a home or investment property - from shortlisting and site visits to offer negotiation and registration. Our advisors have deep local market knowledge across India and exclusive off-market access.',
         impact: 'Our buyers on average secure properties 8% below the initial asking price through our expert negotiation process.',
         features: ['Off-Market Listings', 'Expert Negotiation', 'Legal & Due Diligence Support']
     },
@@ -85,7 +85,7 @@ const ServicesPage = () => {
                     <span className="section-label">Why Choose Us</span>
                     <h2>A systematic approach to exceptional outcomes</h2>
                     <p>
-                        We don't just list properties — we engineer successful transactions. Our team combines deep market
+                        We don't just list properties - we engineer successful transactions. Our team combines deep market
                         intelligence, a proven negotiation framework, and an extensive network of buyers, sellers, and
                         investors to deliver results that consistently exceed expectations. Every client relationship
                         begins with understanding your goals, not just the property.

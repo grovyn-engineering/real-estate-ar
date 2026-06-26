@@ -4,7 +4,7 @@
 #
 # Requires:
 #   npm install -g @gltf-transform/cli sharp-cli
-#   (sharp-cli is optional — only needed for panorama resizing)
+#   (sharp-cli is optional - only needed for panorama resizing)
 #
 # Usage:
 #   bash scripts/compress-assets.sh
@@ -30,7 +30,7 @@ done
 
 GLTF_TRANSFORM="./node_modules/.bin/gltf-transform"
 if [ ! -f "$GLTF_TRANSFORM" ]; then
-  echo "@gltf-transform/cli not found — run: npm install"
+  echo "@gltf-transform/cli not found - run: npm install"
   exit 1
 fi
 
@@ -80,14 +80,14 @@ if $compress_360 && [ -d "$PANO_DIR" ]; then
     else
       # Fallback: copy as-is (install sharp-cli for actual compression)
       cp "$src" "$OUT_PANO_DIR/$base"
-      echo "    (sharp-cli not found — copied without compression)"
+      echo "    (sharp-cli not found - copied without compression)"
     fi
   done
 
-  # EXR files: copy as-is — Three.js needs them for HDR lighting
+  # EXR files: copy as-is - Three.js needs them for HDR lighting
   find "$PANO_DIR" -name "*.exr" | while read -r src; do
     cp "$src" "$OUT_PANO_DIR/"
-    echo "  → $(basename $src) (EXR — copied)"
+    echo "  → $(basename $src) (EXR - copied)"
   done
 
   echo ""

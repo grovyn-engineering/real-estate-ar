@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react'
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
+import { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar/Navbar'
 import LandingPage from './pages/LandingPage'
 import PropertyDetails from './pages/PropertyDetails'
@@ -15,15 +15,11 @@ import './App.css'
 const SESSION_KEY = 'grovyn_opening_seen';
 
 function AppContent() {
-    const [showOpening, setShowOpening] = useState(false);
-    const location = useLocation();
-
-    useEffect(() => {
-        const seen = sessionStorage.getItem(SESSION_KEY);
-        if (!seen && location.pathname === '/') {
-            setShowOpening(true);
-        }
-    }, [location.pathname]);
+    // Decide synchronously on the first render so the curtain is painted
+    // immediately - no flash of the underlying page before it mounts.
+    const [showOpening, setShowOpening] = useState(
+        () => !sessionStorage.getItem(SESSION_KEY) && window.location.pathname === '/'
+    );
 
     const handleOpeningComplete = () => {
         sessionStorage.setItem(SESSION_KEY, '1');

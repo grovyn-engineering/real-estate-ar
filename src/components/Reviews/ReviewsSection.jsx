@@ -20,7 +20,7 @@ const REVIEWS = [
         initial: 'A',
         name: 'Anita Desai',
         time: '2 months ago',
-        text: 'As a first-time luxury buyer, I was nervous. My advisor made the entire process seamless — from shortlisting to registration. Truly exceptional service.'
+        text: 'As a first-time luxury buyer, I was nervous. My advisor made the entire process seamless - from shortlisting to registration. Truly exceptional service.'
     }
 ];
 

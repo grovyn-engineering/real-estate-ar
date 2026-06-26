@@ -1,4 +1,4 @@
-# Large binary assets — host on CDN, do not commit
+# Large binary assets - host on CDN, do not commit
 public/models/
 public/360/
 

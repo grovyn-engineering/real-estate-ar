@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="container">
                 <div className="footer-grid">
                     <div className="footer-brand">
-                        <Link to="/" className="footer-logo" aria-label="Grovyn Properties — Home">
+                        <Link to="/" className="footer-logo" aria-label="Grovyn Properties - Home">
                             <img src="/image.png" alt="Grovyn Properties" className="footer-logo-img" />
                         </Link>
                         <p className="footer-tagline">
@@ -56,7 +56,7 @@ const Footer = () => {
                             </li>
                             <li>
                                 <Mail size={18} />
-                                <span>hello@grovynproperties.com</span>
+                                <span>support@grovynproperties.com</span>
                             </li>
                             <li>
                                 <MapPin size={18} />

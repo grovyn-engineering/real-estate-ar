@@ -50,7 +50,7 @@ const Hero = () => {
                     </h1>
 
                     <p className="hero-subtitle" ref={descRef}>
-                        We curate India's finest residential properties — from metro apartments and villas
+                        We curate India's finest residential properties - from metro apartments and villas
                         to luxury farmhouses. Expert guidance, RERA compliance, and a seamless experience.
                     </p>
 
@@ -64,31 +64,31 @@ const Hero = () => {
                             Free Consultation
                         </Link>
                     </div>
+                </div>
 
-                    <div className="hero-bottom-stats">
-                        <div className="stat-group">
-                            <div className="stat-profile-imgs">
-                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=80&q=80&fit=crop&crop=face" alt="Client" />
-                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=80&q=80&fit=crop&crop=face" alt="Client" />
-                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=80&q=80&fit=crop&crop=face" alt="Client" />
-                            </div>
-                            <p className="stat-text-small">
-                                <strong>1,200+</strong> homeowners<br />across India trust us
-                            </p>
+                <div className="hero-bottom-stats">
+                    <div className="stat-group">
+                        <div className="stat-profile-imgs">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=80&q=80&fit=crop&crop=face" alt="Client" />
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=80&q=80&fit=crop&crop=face" alt="Client" />
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=80&q=80&fit=crop&crop=face" alt="Client" />
                         </div>
-                        <div className="stat-metrics">
-                            <div className="metric-item">
-                                <h3>15<span className="metric-plus">+</span></h3>
-                                <p>Years of<br />excellence</p>
-                            </div>
-                            <div className="metric-item">
-                                <h3>₹500<span className="metric-plus">Cr</span></h3>
-                                <p>Transaction<br />volume</p>
-                            </div>
-                            <div className="metric-item">
-                                <h3>98<span className="metric-plus">%</span></h3>
-                                <p>Client<br />satisfaction</p>
-                            </div>
+                        <p className="stat-text-small">
+                            <strong>1,200+</strong> homeowners<br />across India trust us
+                        </p>
+                    </div>
+                    <div className="stat-metrics">
+                        <div className="metric-item">
+                            <h3>15<span className="metric-plus">+</span></h3>
+                            <p>Years of<br />excellence</p>
+                        </div>
+                        <div className="metric-item">
+                            <h3>₹500<span className="metric-plus">Cr</span></h3>
+                            <p>Transaction<br />volume</p>
+                        </div>
+                        <div className="metric-item">
+                            <h3>98<span className="metric-plus">%</span></h3>
+                            <p>Client<br />satisfaction</p>
                         </div>
                     </div>
                 </div>

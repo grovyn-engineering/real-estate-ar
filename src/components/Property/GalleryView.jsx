@@ -28,7 +28,7 @@ const GalleryView = ({ images, title }) => {
                     <img
                         key={activeIndex}
                         src={images[activeIndex]}
-                        alt={`${title} — view ${activeIndex + 1}`}
+                        alt={`${title} - view ${activeIndex + 1}`}
                         className="gallery-main-image"
                     />
 

@@ -13,11 +13,11 @@ const FAQS = [
     },
     {
         question: 'What are your fees for buying and selling?',
-        answer: 'Our standard brokerage fee for sellers is competitive and transparent — we\'ll discuss this upfront during your free valuation. For buyers, our advisory service is complimentary for qualified clients.'
+        answer: 'Our standard brokerage fee for sellers is competitive and transparent - we\'ll discuss this upfront during your free valuation. For buyers, our advisory service is complimentary for qualified clients.'
     },
     {
         question: 'Do you cover properties across India?',
-        answer: 'Yes. We operate across 25+ cities in India with dedicated local market experts. We cover Mumbai, Bangalore, Delhi NCR, Pune, Goa, Hyderabad and more — with RERA-compliant support in each market.'
+        answer: 'Yes. We operate across 25+ cities in India with dedicated local market experts. We cover Mumbai, Bangalore, Delhi NCR, Pune, Goa, Hyderabad and more - with RERA-compliant support in each market.'
     },
     {
         question: 'How long does the buying process typically take?',
@@ -25,7 +25,7 @@ const FAQS = [
     },
     {
         question: 'Can you manage my investment property after purchase?',
-        answer: 'Absolutely. Our Rental Management division handles everything: tenant sourcing, verification, rent collection, maintenance coordination and regular performance reporting — maximising your yield with zero hassle.'
+        answer: 'Absolutely. Our Rental Management division handles everything: tenant sourcing, verification, rent collection, maintenance coordination and regular performance reporting - maximising your yield with zero hassle.'
     }
 ];
 

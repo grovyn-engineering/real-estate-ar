@@ -69,7 +69,7 @@ const QuizSection = () => {
 
                     <div className="quiz-footer">
                         <div className="quiz-progress-wrapper">
-                            <span className="quiz-progress-text">Step {step} of 2 — {progress}% done</span>
+                            <span className="quiz-progress-text">Step {step} of 2 - {progress}% done</span>
                             <div className="quiz-progress-bar">
                                 <div className="quiz-progress-fill" style={{ width: `${progress}%` }}></div>
                             </div>

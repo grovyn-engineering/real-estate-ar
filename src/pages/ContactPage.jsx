@@ -58,7 +58,7 @@ const ContactPage = () => {
                         </div>
                         <div className="info-pill">
                             <Mail size={18} />
-                            <span>hello@grovynproperties.com</span>
+                            <span>support@grovynproperties.com</span>
                         </div>
                         <div className="info-pill">
                             <MapPin size={18} />

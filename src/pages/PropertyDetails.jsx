@@ -48,7 +48,7 @@ const PropertyDetails = () => {
                             <div className="spec-card">
                                 <Layers size={24} className="gold-text" />
                                 <h4>Property Type</h4>
-                                <p>{property.type} — premium finishes and thoughtfully designed living spaces throughout.</p>
+                                <p>{property.type} - premium finishes and thoughtfully designed living spaces throughout.</p>
                             </div>
                             <div className="spec-card">
                                 <Zap size={24} className="gold-text" />

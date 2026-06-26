@@ -28,7 +28,7 @@ const STEPS = [
         num: '03',
         icon: <Eye size={24} />,
         title: 'Property Viewings',
-        desc: 'Schedule private viewings at your convenience — in person or via immersive virtual tours. We\'ll arrange everything, including travel.',
+        desc: 'Schedule private viewings at your convenience - in person or via immersive virtual tours. We\'ll arrange everything, including travel.',
         profile: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80',
         profileName: 'Rahul Mehta, Senior Advisor',
         dark: true
@@ -60,7 +60,7 @@ const ProcessSteps = () => {
                 <div className="process-header">
                     <span className="section-label">How It Works</span>
                     <h2 className="process-main-title">
-                        From first search to<br />keys in hand — we guide you every step
+                        From first search to<br />keys in hand - we guide you every step
                     </h2>
                 </div>
 
@@ -117,7 +117,7 @@ const ProcessSteps = () => {
                             <h3 className="process-card-title large">{STEPS[4].title}</h3>
                             <p className="process-card-desc">{STEPS[4].desc}</p>
                             <div className="process-5-contact">
-                                <p>Available 7 days<br />a week — 10:00 to 20:00 IST</p>
+                                <p>Available 7 days<br />a week - 10:00 to 20:00 IST</p>
                             </div>
                         </div>
                     </div>
