@@ -49,7 +49,7 @@ export default function OpeningSequence({ onComplete }) {
             <div ref={rightPanelRef} className="opening-panel opening-panel-right" />
 
             <div ref={textRef} className="opening-text">
-                <h1 className="opening-title">Grovyn Properties</h1>
+                <img src="/image.png" alt="Grovyn Properties" className="opening-logo" />
                 <p className="opening-subtitle">Find Your Dream Home in India</p>
             </div>
         </div>

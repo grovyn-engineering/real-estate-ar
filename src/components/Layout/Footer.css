@@ -13,13 +13,16 @@
 }
 
 .footer-logo {
-    display: block;
-    font-size: 1.5rem;
-    font-weight: 700;
-    line-height: 1;
-    color: #fff;
+    display: inline-block;
     text-decoration: none;
     margin-bottom: 2rem;
+}
+
+.footer-logo-img {
+    height: 3rem;
+    width: auto;
+    display: block;
+    border-radius: 10px;
 }
 
 .footer-tagline {

@@ -38,13 +38,12 @@
     z-index: 10;
 }
 
-.opening-title {
-    font-family: var(--font-montserrat);
-    font-size: clamp(1.75rem, 4vw, 3rem);
-    font-weight: 700;
-    color: #ffffff;
-    text-transform: uppercase;
-    letter-spacing: 0.25em;
+.opening-logo {
+    width: clamp(240px, 42vw, 440px);
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 16px;
 }
 
 .opening-subtitle {

@@ -11,8 +11,8 @@ const Footer = () => {
             <div className="container">
                 <div className="footer-grid">
                     <div className="footer-brand">
-                        <Link to="/" className="footer-logo serif">
-                            GROVYN<br />PROPERTIES
+                        <Link to="/" className="footer-logo" aria-label="Grovyn Properties — Home">
+                            <img src="/image.png" alt="Grovyn Properties" className="footer-logo-img" />
                         </Link>
                         <p className="footer-tagline">
                             We connect discerning buyers and sellers with India's finest residential properties. Your trusted partner in premium real estate across metros and beyond.

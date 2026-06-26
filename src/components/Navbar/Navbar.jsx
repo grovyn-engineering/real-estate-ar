@@ -36,8 +36,8 @@ const Navbar = () => {
         <nav className={`navbar-premium ${isScrolled ? 'scrolled' : ''} ${isMenuOpen ? 'is-menu-open' : ''}`}>
             <div className="nav-container container">
                 <div className="nav-logo">
-                    <Link to="/" className="brand-name serif">
-                        GROVYN<br />PROPERTIES
+                    <Link to="/" className="brand-name" aria-label="Grovyn Properties — Home">
+                        <img src="/image.png" alt="Grovyn Properties" className="brand-logo" />
                     </Link>
                 </div>
 
